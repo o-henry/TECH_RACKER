@@ -1,0 +1,241 @@
+version: 1
+technologies:
+  - id: alzheimer-blood-test
+    openalex:
+      - key: plasma-biomarkers
+        search: 'plasma p-tau217 amyloid Alzheimer blood test'
+        include_terms: ['p-tau217', 'ptau217', 'amyloid', 'blood', 'plasma']
+        exclude_terms: ['mouse model', 'murine']
+        min_score: 0.25
+    clinical_trials:
+      - key: blood-biomarker
+        query: 'Alzheimer Disease AND (p-tau217 OR plasma amyloid)'
+        include_terms: ['p-tau217', 'ptau217', 'plasma', 'blood', 'amyloid']
+        min_score: 0.2
+
+  - id: in-vivo-gene-editing
+    openalex:
+      - key: systemic-crispr
+        search: 'in vivo CRISPR genome editing therapy clinical'
+        include_terms: ['in vivo', 'crispr', 'genome editing', 'gene editing']
+        exclude_terms: ['ex vivo']
+        min_score: 0.25
+    clinical_trials:
+      - key: in-vivo-crispr
+        query: 'AREA[InterventionName](CRISPR) AND (in vivo OR genome editing)'
+        include_terms: ['crispr', 'gene editing', 'genome editing', 'nexiguran', 'ntla']
+        min_score: 0.2
+    sec:
+      - key: intellia
+        ticker: NTLA
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['nexiguran', 'nex-z', 'magnitude', 'crispr', 'in vivo', 'clinical hold']
+
+  - id: personalized-cancer-vaccine
+    openalex:
+      - key: neoantigen-vaccine
+        search: 'personalized neoantigen cancer vaccine clinical trial'
+        include_terms: ['personalized', 'neoantigen', 'cancer vaccine', 'mrna vaccine']
+        min_score: 0.25
+    clinical_trials:
+      - key: neoantigen-vaccine
+        query: 'personalized neoantigen cancer vaccine'
+        include_terms: ['neoantigen', 'personalized', 'vaccine', 'mrna-4157', 'v940']
+        min_score: 0.2
+    sec:
+      - key: moderna
+        ticker: MRNA
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['v940', 'mrna-4157', 'individualized neoantigen', 'personalized cancer vaccine']
+      - key: merck
+        ticker: MRK
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['v940', 'mrna-4157', 'individualized neoantigen', 'personalized cancer vaccine']
+
+  - id: xenokidney
+    openalex:
+      - key: pig-kidney
+        search: 'gene edited pig kidney xenotransplantation human'
+        include_terms: ['pig kidney', 'porcine kidney', 'xenotransplant', 'gene-edited']
+        min_score: 0.25
+    clinical_trials:
+      - key: xenokidney
+        query: 'kidney xenotransplantation pig'
+        include_terms: ['xenotransplant', 'pig', 'porcine', 'kidney']
+        min_score: 0.2
+    sec:
+      - key: united-therapeutics
+        ticker: UTHR
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['xenotransplant', 'ukidney', 'pig kidney', 'revivicor']
+
+  - id: stem-cell-islets
+    openalex:
+      - key: stem-cell-islets
+        search: 'stem cell derived islet cells type 1 diabetes clinical'
+        include_terms: ['stem cell-derived', 'islet cells', 'type 1 diabetes', 'beta cells']
+        min_score: 0.25
+    clinical_trials:
+      - key: stem-cell-islets
+        query: 'stem cell derived islet type 1 diabetes'
+        include_terms: ['islet', 'stem cell', 'type 1 diabetes', 'zimislecel', 'vx-880']
+        min_score: 0.2
+    sec:
+      - key: vertex
+        ticker: VRTX
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['zimislecel', 'vx-880', 'islet cell', 'type 1 diabetes']
+
+  - id: perovskite-tandem
+    openalex:
+      - key: tandem-solar
+        search: 'perovskite silicon tandem solar cell stability scale-up'
+        include_terms: ['perovskite', 'silicon tandem', 'tandem solar', 'stability', 'module']
+        min_score: 0.25
+
+  - id: enhanced-geothermal
+    openalex:
+      - key: egs
+        search: 'enhanced geothermal systems field demonstration reservoir'
+        include_terms: ['enhanced geothermal', 'egs', 'reservoir stimulation', 'geothermal']
+        min_score: 0.25
+    sec:
+      - key: ormat
+        ticker: ORA
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['enhanced geothermal', 'egs', 'geothermal project', 'reservoir']
+
+  - id: direct-air-capture
+    openalex:
+      - key: dac
+        search: 'direct air capture carbon dioxide pilot cost sorbent'
+        include_terms: ['direct air capture', 'dac', 'carbon dioxide removal', 'sorbent']
+        min_score: 0.25
+    clinical_trials: []
+    sec:
+      - key: occidental
+        ticker: OXY
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['direct air capture', 'stratos', '1pointfive', 'carbon removal']
+
+  - id: fusion-power
+    openalex:
+      - key: fusion-energy
+        search: 'fusion energy plasma confinement net energy materials'
+        include_terms: ['fusion energy', 'fusion power', 'tokamak', 'stellarator', 'inertial fusion']
+        min_score: 0.25
+
+  - id: fault-tolerant-quantum
+    openalex:
+      - key: quantum-error-correction
+        search: 'fault tolerant quantum computing logical qubit error correction'
+        include_terms: ['fault-tolerant', 'fault tolerant', 'logical qubit', 'quantum error correction']
+        min_score: 0.25
+    sec:
+      - key: ibm
+        ticker: IBM
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['quantum error correction', 'fault-tolerant quantum', 'logical qubit', 'quantum computing']
+      - key: alphabet
+        ticker: GOOGL
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['quantum error correction', 'fault-tolerant quantum', 'logical qubit', 'quantum computing']
+      - key: ionq
+        ticker: IONQ
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['fault-tolerant', 'logical qubit', 'quantum computing', 'error correction']
+      - key: rigetti
+        ticker: RGTI
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['fault-tolerant', 'logical qubit', 'quantum computing', 'error correction']
+
+  - id: robotaxi
+    openalex:
+      - key: autonomous-ridehail
+        search: 'driverless robotaxi autonomous ride hailing safety deployment'
+        include_terms: ['robotaxi', 'driverless', 'autonomous ride', 'ride-hailing']
+        min_score: 0.25
+    clinical_trials: []
+    sec:
+      - key: alphabet-waymo
+        ticker: GOOGL
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['waymo', 'robotaxi', 'autonomous ride-hailing', 'driverless']
+      - key: tesla
+        ticker: TSLA
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['robotaxi', 'cybercab', 'autonomous ride-hailing', 'driverless']
+
+  - id: implantable-bci
+    openalex:
+      - key: implantable-bci
+        search: 'implantable brain computer interface human clinical speech motor'
+        include_terms: ['brain-computer interface', 'brain computer interface', 'implantable', 'intracortical']
+        min_score: 0.25
+    clinical_trials:
+      - key: implantable-bci
+        query: 'implantable brain computer interface'
+        include_terms: ['brain-computer interface', 'brain computer interface', 'implantable', 'neuralink', 'synchron']
+        min_score: 0.2
+
+  - id: humanoid-robots
+    openalex:
+      - key: humanoid-robotics
+        search: 'general purpose humanoid robot industrial deployment manipulation'
+        include_terms: ['humanoid robot', 'bipedal robot', 'general-purpose robot', 'dexterous manipulation']
+        min_score: 0.25
+    sec:
+      - key: tesla-optimus
+        ticker: TSLA
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['optimus', 'humanoid robot', 'humanoid robotics']
+      - key: nvidia-robotics
+        ticker: NVDA
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['humanoid robot', 'physical ai', 'robotics foundation model']
+
+  - id: cultivated-meat
+    openalex:
+      - key: cultivated-meat
+        search: 'cultivated meat cell culture scale-up bioreactor cost'
+        include_terms: ['cultivated meat', 'cultured meat', 'cell-based meat', 'bioreactor']
+        min_score: 0.25
+
+  - id: sodium-ion-battery
+    openalex:
+      - key: sodium-ion
+        search: 'sodium ion battery commercial cathode cycle life manufacturing'
+        include_terms: ['sodium-ion battery', 'sodium ion battery', 'cathode', 'cycle life']
+        min_score: 0.25
+
+  - id: ai-weather-forecasting
+    openalex:
+      - key: ml-weather
+        search: 'machine learning weather forecasting operational numerical prediction'
+        include_terms: ['weather forecasting', 'machine learning', 'operational forecast', 'numerical weather']
+        min_score: 0.25
+    sec:
+      - key: alphabet-weather
+        ticker: GOOGL
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['weather forecasting', 'weather model', 'graphcast', 'weather prediction']
+      - key: microsoft-weather
+        ticker: MSFT
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['weather forecasting', 'weather model', 'aurora', 'weather prediction']
+
+  - id: commercial-space-stations
+    openalex:
+      - key: commercial-leo-station
+        search: 'commercial low earth orbit space station habitat operations'
+        include_terms: ['commercial space station', 'low earth orbit station', 'orbital habitat']
+        min_score: 0.25
+    sec:
+      - key: redwire
+        ticker: RDW
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['commercial space station', 'starlab', 'orbital reef', 'low earth orbit destination']
+      - key: boeing
+        ticker: BA
+        forms: ['8-K', '10-Q', '10-K']
+        include_terms: ['commercial space station', 'orbital reef', 'low earth orbit destination']

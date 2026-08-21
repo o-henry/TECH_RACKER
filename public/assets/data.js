@@ -1,0 +1,2859 @@
+window.TECHNOLOGIES = [
+  {
+    "id": "alzheimer-blood-test",
+    "name": "알츠하이머 혈액 기반 아밀로이드 검사",
+    "nameEn": "Blood-based amyloid pathology test",
+    "category": "의료·진단",
+    "status": "규제 허가·일부 로트 리콜",
+    "statusKey": "regulated",
+    "trajectory": "regress",
+    "trajectoryLabel": "품질 후퇴",
+    "verifiedAt": "2026-08-19",
+    "summary": "혈장 pTau217과 β-아밀로이드 비율로 뇌 아밀로이드 병리 가능성을 평가하는 검사다. 미국에서는 증상이 있는 55세 이상 성인의 전문 진료 환경에서 진단을 보조하도록 허가됐지만, 2025년 12월 일부 로트에서 위양성·불확정 분류 증가 문제로 시정조치가 시작됐고 FDA 데이터베이스상 2026년 8월 18일 기준 Class II 리콜이 공개·분류 상태로 남아 있다. 선별검사나 단독 진단으로 허가된 것은 아니다.",
+    "currentState": "미국 FDA 허가 상태는 유지되지만, 특정 4개 로트는 부정확한 분류 위험으로 사용 중단·시정 대상",
+    "access": "의료기관 검사 · 선별검사 및 자가검사 아님",
+    "latest": {
+      "date": "2026-08-18",
+      "title": "일부 로트의 Class II 리콜이 공개·분류 상태로 유지",
+      "text": "FDA 리콜 데이터베이스는 특정 4개 로트에서 위양성 또는 불확정 결과가 과도하게 나타날 수 있어 사용 중단과 과거 결과 검토가 요구됐다고 기록한다. 리콜 상태는 2026년 8월 18일 페이지 갱신 기준 Open, Classified다.",
+      "source": "U.S. FDA",
+      "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRes/res.cfm?ID=217941"
+    },
+    "next": {
+      "date": "미정",
+      "text": "FDA 리콜 종료 여부, 제조사 시정조치 결과, 영향 로트 교체 뒤의 실제 성능 및 진료 도입 자료"
+    },
+    "constraints": [
+      "특정 로트에서 위양성·불확정 분류가 증가할 수 있어 과거 결과 검토가 필요함",
+      "검사 결과만으로 진단하거나 치료를 결정할 수 없음",
+      "전문 진료 밖의 무증상 선별 용도는 허가 범위가 아님"
+    ],
+    "unknowns": [
+      "리콜 종료 시점과 시정조치 이후 로트의 외부 성능 검증",
+      "국가별 급여·가격과 검사 접근성",
+      "실제 임상 현장에서 PET·뇌척수액 검사를 얼마나 대체하는지",
+      "장기 추적에서 치료 결정과 환자 결과에 미치는 영향"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "허가 심사에서는 499개 임상 검체를 PET 또는 뇌척수액 결과와 비교",
+        "note": "허가 당시 성능과 리콜 대상 로트의 품질 문제는 분리해 해석해야 함"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "제한",
+        "value": "전문 진료의 진단 보조 검사",
+        "note": "무증상 선별·자가검사 아님"
+      },
+      {
+        "label": "규제",
+        "state": "confirmed",
+        "stateLabel": "허가",
+        "value": "미국 FDA 510(k) clearance",
+        "note": "허가 자체와 특정 로트 리콜이 동시에 존재"
+      },
+      {
+        "label": "생산·운영",
+        "state": "blocked",
+        "stateLabel": "품질 이슈",
+        "value": "4개 로트가 Class II 리콜 대상",
+        "note": "리콜 상태 Open, Classified"
+      },
+      {
+        "label": "접근성",
+        "state": "progress",
+        "stateLabel": "제한 접근",
+        "value": "의료기관을 통한 검사",
+        "note": "기관 보급률·보험 적용은 공개자료가 제한적"
+      }
+    ],
+    "facts": [
+      {
+        "value": "91.7%",
+        "label": "양성 결과 중 아밀로이드 병리가 확인된 비율",
+        "note": "FDA 평가 연구의 499개 검체"
+      },
+      {
+        "value": "97.3%",
+        "label": "음성 결과 중 아밀로이드 병리가 음성인 비율",
+        "note": "FDA 평가 연구"
+      },
+      {
+        "value": "<20%",
+        "label": "불확정 결과를 받은 검체 비율",
+        "note": "FDA 평가 연구"
+      },
+      {
+        "value": "1,569",
+        "label": "리콜 기록상 유통 수량",
+        "note": "FDA Class II recall database"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-05-16",
+        "title": "미국 허가",
+        "text": "FDA가 최초의 알츠하이머 진단 보조 혈액검사를 510(k) 경로로 허가했다.",
+        "kind": "진전",
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-clears-first-blood-test-used-diagnosing-alzheimers-disease",
+        "source": "FDA"
+      },
+      {
+        "date": "2025-12-11",
+        "title": "일부 로트 시정조치 시작",
+        "text": "제조사가 특정 4개 로트의 사용 중단과 과거 결과 검토를 요청했다. FDA는 2026년 2월 5일 이를 Class II 리콜로 게시했다.",
+        "kind": "후퇴",
+        "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRes/res.cfm?ID=217941",
+        "source": "U.S. FDA"
+      },
+      {
+        "date": "2026-06-05",
+        "title": "허가 목록 재확인",
+        "text": "FDA Breakthrough Devices 공개 목록에서 해당 검사와 허가일을 다시 확인할 수 있다.",
+        "kind": "검증",
+        "url": "https://www.fda.gov/medical-devices/how-study-and-market-your-device/breakthrough-devices-program",
+        "source": "FDA"
+      }
+    ],
+    "sources": [
+      {
+        "type": "규제기관",
+        "publisher": "U.S. FDA",
+        "title": "FDA Clears First Blood Test Used in Diagnosing Alzheimer’s Disease",
+        "date": "2025-05-16",
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-clears-first-blood-test-used-diagnosing-alzheimers-disease"
+      },
+      {
+        "type": "규제 목록",
+        "publisher": "U.S. FDA",
+        "title": "Breakthrough Devices Program — authorized devices list",
+        "date": "2026-06-05",
+        "url": "https://www.fda.gov/medical-devices/how-study-and-market-your-device/breakthrough-devices-program"
+      },
+      {
+        "type": "리콜 데이터베이스",
+        "publisher": "U.S. FDA",
+        "title": "Class 2 Device Recall — Lumipulse G pTau217/β-Amyloid 1-42 Plasma Ratio",
+        "date": "2026-08-18 갱신",
+        "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRes/res.cfm?ID=217941"
+      }
+    ]
+  },
+  {
+    "id": "in-vivo-gene-editing",
+    "name": "체내 유전자 편집 치료",
+    "nameEn": "In vivo genome editing therapeutics",
+    "category": "의료·치료",
+    "status": "후기 임상",
+    "statusKey": "phase3",
+    "trajectory": "mixed",
+    "trajectoryLabel": "재개·검증",
+    "verifiedAt": "2026-08-19",
+    "summary": "환자의 몸 안에서 직접 유전자를 편집하는 치료 접근이다. 간의 TTR 유전자를 표적으로 하는 nexiguran ziclumeran은 3상에 진입했지만 2025년 안전성 사건으로 임상 보류를 겪었고, 2026년 보류 해제 뒤 등록이 재개됐다. 아직 허가된 치료는 아니다.",
+    "currentState": "전신 투여 CRISPR 후보가 임상 3상 등록을 재개한 상태",
+    "access": "임상시험 참여자만 접근 가능",
+    "latest": {
+      "date": "2026-08-06",
+      "title": "두 개의 nex-z 3상 임상 등록 재개 확인",
+      "text": "개발사는 MAGNITUDE와 MAGNITUDE-2의 등록이 재개됐다고 보고했다. 이는 회사 공시이며 최종 효능·안전성 결과는 아직 없다.",
+      "source": "Intellia",
+      "url": "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-second-quarter-2026-financial"
+    },
+    "next": {
+      "date": "미정",
+      "text": "MAGNITUDE·MAGNITUDE-2 등록 완료와 사전 지정 효능·안전성 결과"
+    },
+    "constraints": [
+      "2025년 중증 간 수치 이상 이후 강화된 안전성 모니터링",
+      "원치 않는 편집과 장기 안전성 평가",
+      "일회 투여 유전자치료의 제조·품질 일관성과 규제 심사"
+    ],
+    "unknowns": [
+      "3상에서 임상 사건 감소가 재현되는지",
+      "장기 추적에서 편집 효과와 부작용이 어떻게 유지되는지",
+      "승인 신청 시점과 허가 범위"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "초기 임상 뒤 무작위 3상에서 임상 유효성 검증 중",
+        "note": "회사·임상등록 자료"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "임상",
+        "value": "ATTR-CM 약 1,200명 규모 3상 설계",
+        "note": "MAGNITUDE"
+      },
+      {
+        "label": "규제",
+        "state": "progress",
+        "stateLabel": "임상 허용",
+        "value": "FDA 임상 보류 해제 후 시험 재개",
+        "note": "승인 신청 전"
+      },
+      {
+        "label": "생산·운영",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "상업 생산 능력과 배치 일관성 자료 미공개",
+        "note": "공개 자료 기준"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "임상시험 외 일반 접근 없음",
+        "note": "허가 전"
+      }
+    ],
+    "facts": [
+      {
+        "value": "≈1,200",
+        "label": "MAGNITUDE 목표 참여자 수",
+        "note": "2:1 무작위 배정, 회사 자료"
+      },
+      {
+        "value": "1회",
+        "label": "nex-z 투여 횟수",
+        "note": "55 mg 정맥주입 임상 설계"
+      },
+      {
+        "value": "2026.03",
+        "label": "MAGNITUDE FDA 임상 보류 해제",
+        "note": "개발사 발표"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-10-29",
+        "title": "임상 보류",
+        "text": "중증 간 수치 이상과 빌리루빈 증가가 관찰된 뒤 MAGNITUDE 계열 임상에 FDA 보류가 내려졌다.",
+        "kind": "후퇴",
+        "url": "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-fda-lift-clinical-hold-0",
+        "source": "Intellia"
+      },
+      {
+        "date": "2026-03-02",
+        "title": "보류 해제",
+        "text": "강화된 간 검사 모니터링과 제외 기준을 포함한 완화 조치 후 MAGNITUDE 보류가 해제됐다.",
+        "kind": "재개",
+        "url": "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-fda-lift-clinical-hold-0",
+        "source": "Intellia"
+      },
+      {
+        "date": "2026-08-06",
+        "title": "등록 재개 확인",
+        "text": "개발사는 MAGNITUDE와 MAGNITUDE-2에서 등록이 성공적으로 재개됐다고 밝혔다.",
+        "kind": "진전",
+        "url": "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-second-quarter-2026-financial",
+        "source": "Intellia"
+      }
+    ],
+    "sources": [
+      {
+        "type": "임상등록",
+        "publisher": "ClinicalTrials.gov",
+        "title": "MAGNITUDE — NCT06128629",
+        "date": "현재 등록",
+        "url": "https://clinicaltrials.gov/study/NCT06128629"
+      },
+      {
+        "type": "회사 공시",
+        "publisher": "Intellia Therapeutics",
+        "title": "FDA Lift of Clinical Hold on MAGNITUDE Phase 3",
+        "date": "2026-03-02",
+        "url": "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-fda-lift-clinical-hold-0"
+      },
+      {
+        "type": "회사 공시",
+        "publisher": "Intellia Therapeutics",
+        "title": "Second Quarter 2026 Results and Business Updates",
+        "date": "2026-08-06",
+        "url": "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-second-quarter-2026-financial"
+      },
+      {
+        "type": "규제 지침",
+        "publisher": "U.S. FDA",
+        "title": "Human Gene Therapy Products Incorporating Human Genome Editing",
+        "date": "2024-01",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/human-gene-therapy-products-incorporating-human-genome-editing"
+      }
+    ]
+  },
+  {
+    "id": "personalized-cancer-vaccine",
+    "name": "개인 맞춤형 암 백신",
+    "nameEn": "Personalized neoantigen cancer vaccine",
+    "category": "의료·치료",
+    "status": "3상 주요 평가 변수 달성 완료 · 규제 허가 미승인",
+    "statusKey": "phase3",
+    "trajectory": "advance",
+    "trajectoryLabel": "3상 결과 성공",
+    "verifiedAt": "2026-08-21",
+    "summary": "환자 종양 변이를 바탕으로 개인별 신생항원을 선택해 제조하는 mRNA 치료 백신이다. Merck와 Moderna는 완전 절제된 고위험 흑색종 대상 INTerpath-001 3상에서 무재발 생존(RFS)과 원격 전이 무발생 생존(DMFS) 평가 변수를 모두 달성했다고 발표했다. 다만 효과 크기·위험비·p값과 전체 생존(OS) 결과는 아직 공개되지 않았고, 규제기관의 시판 허가도 받지 않았다.",
+    "currentState": "완전 절제된 2B–4기 흑색종 대상 3상 주요 결과에서 RFS와 DMFS 평가 변수 달성 완료. 시험 결과는 성공으로 발표됐으나, 상세 수치·전체 생존(OS) 추적·규제 허가 승인은 아직 남아 있다.",
+    "access": "규제 허가 미승인 · 임상시험 외 일반 진료 사용 불가",
+    "latest": {
+      "date": "2026-08-19",
+      "title": "INTerpath-001 3상 RFS·DMFS 평가 변수 달성 완료",
+      "text": "Merck와 Moderna는 intismeran autogene과 pembrolizumab 병용이 pembrolizumab 단독 대비 무재발 생존(RFS)과 핵심 2차 평가 변수인 원격 전이 무발생 생존(DMFS)에서 통계적으로 유의하고 임상적으로 의미 있는 개선을 보였다고 발표했다. 3상 효과 크기·위험비·p값은 미공개이며 전체 생존(OS) 추적은 계속된다. 새로운 안전성 신호는 보고되지 않았다.",
+      "source": "Merck / Moderna",
+      "url": "https://www.merck.com/news/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-autogene-plus-keytruda-met-endpoints-of-recurrence-free-survival-rfs-and-distant-metastasis-free-survival-dmfs-in-patient/"
+    },
+    "next": {
+      "date": "일정 미공개",
+      "text": "3상 상세 효과 크기·하위군·안전성 공개, 전체 생존(OS) 추적, 규제 제출·결정과 개인별 제조 처리 시간·품질 자료"
+    },
+    "constraints": [
+      "환자별 종양 시퀀싱과 제조가 필요해 처리시간이 길어질 수 있음",
+      "pembrolizumab 병용 설계여서 백신의 독립 기여와 실제 절대효과를 상세 자료로 확인해야 함",
+      "개인별 제품의 품질관리·공급망·비용"
+    ],
+    "unknowns": [
+      "3상 위험비·절대효과·p값과 하위군 일관성",
+      "전체생존 이점과 장기 안전성",
+      "암종별로 효과가 얼마나 일반화되는지",
+      "상업 제조 처리시간과 가격"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "3상 톱라인 양성",
+        "value": "흑색종 3상에서 RFS·DMFS 평가 변수 달성 완료",
+        "note": "효과 크기·위험비·p값 미공개"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "임상",
+        "value": "다국가 3상 운영과 추적 관찰",
+        "note": "허가 전 임상 사용"
+      },
+      {
+        "label": "규제",
+        "state": "progress",
+        "stateLabel": "제출 준비",
+        "value": "기업이 규제기관과 결과 논의 예정",
+        "note": "제출·승인 여부와 일정 미공개"
+      },
+      {
+        "label": "생산·운영",
+        "state": "progress",
+        "stateLabel": "임상 제조",
+        "value": "1,137명 규모 3상에 환자별 제조 적용",
+        "note": "상업 처리량·비용 자료 미공개"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "임상시험 외 일반 접근 없음",
+        "note": "규제 결정 전"
+      }
+    ],
+    "facts": [
+      {
+        "value": "1,137",
+        "label": "INTerpath-001 등록 참가자",
+        "note": "ClinicalTrials.gov 등록 기준"
+      },
+      {
+        "value": "RFS",
+        "label": "1차 평가 변수 달성",
+        "note": "재발 또는 사망 위험 평가"
+      },
+      {
+        "value": "DMFS",
+        "label": "핵심 2차 평가 변수 달성",
+        "note": "원격 전이 또는 사망 위험 평가"
+      },
+      {
+        "value": "미공개",
+        "label": "3상 효과 크기·위험비·p값·OS",
+        "note": "톱라인 발표로 성공 여부만 확인"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023",
+        "title": "흑색종 3상 등록",
+        "text": "고위험 흑색종에서 intismeran autogene과 pembrolizumab 병용을 평가하는 3상이 등록됐다.",
+        "kind": "진전",
+        "url": "https://clinicaltrials.gov/study/NCT05933577",
+        "source": "ClinicalTrials.gov"
+      },
+      {
+        "date": "2023",
+        "title": "비소세포폐암 3상 등록",
+        "text": "완전 절제된 비소세포폐암의 보조요법을 평가하는 별도 3상이 등록됐다.",
+        "kind": "진전",
+        "url": "https://clinicaltrials.gov/study/NCT06077760",
+        "source": "ClinicalTrials.gov"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "흑색종 3상 주요 평가 변수 달성 발표",
+        "text": "RFS와 DMFS 개선을 발표했지만 상세 효과 수치와 OS 결과는 공개하지 않았다. 결과 발표와 시판 승인을 구분해 기록했다.",
+        "kind": "진전",
+        "url": "https://www.merck.com/news/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-autogene-plus-keytruda-met-endpoints-of-recurrence-free-survival-rfs-and-distant-metastasis-free-survival-dmfs-in-patient/",
+        "source": "Merck / Moderna"
+      }
+    ],
+    "sources": [
+      {
+        "type": "기업 3상 톱라인",
+        "publisher": "Merck / Moderna",
+        "title": "Phase 3 INTerpath-001 Met RFS and DMFS Endpoints",
+        "date": "2026-08-19",
+        "url": "https://www.merck.com/news/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-autogene-plus-keytruda-met-endpoints-of-recurrence-free-survival-rfs-and-distant-metastasis-free-survival-dmfs-in-patient/"
+      },
+      {
+        "type": "임상등록",
+        "publisher": "ClinicalTrials.gov",
+        "title": "Intismeran Autogene in High-risk Melanoma — NCT05933577",
+        "date": "현재 등록",
+        "url": "https://clinicaltrials.gov/study/NCT05933577"
+      },
+      {
+        "type": "임상등록",
+        "publisher": "ClinicalTrials.gov",
+        "title": "Intismeran Autogene in NSCLC — NCT06077760",
+        "date": "현재 등록",
+        "url": "https://clinicaltrials.gov/study/NCT06077760"
+      }
+    ]
+  },
+  {
+    "id": "xenokidney",
+    "name": "유전자 편집 돼지 신장 이식",
+    "nameEn": "Gene-edited porcine kidney xenotransplantation",
+    "category": "의료·이식",
+    "status": "초기 임상",
+    "statusKey": "phase1",
+    "trajectory": "advance",
+    "trajectoryLabel": "임상 진입",
+    "verifiedAt": "2026-08-19",
+    "summary": "사람 장기 부족을 줄이기 위해 유전자 편집 돼지의 신장을 이식하는 접근이다. 말기신부전 환자를 대상으로 10개 유전자 편집 신장을 평가하는 임상시험이 등록돼 있다. FDA는 감염성 위험과 장기 추적을 별도로 다루는 지침을 운영한다.",
+    "currentState": "10개 유전자 편집 돼지 신장을 평가하는 사람 대상 임상시험 등록",
+    "access": "극소수 임상시험 대상자에게만 가능",
+    "latest": {
+      "date": "2026-08-19",
+      "title": "10 GE Xenokidney 임상 등록 재확인",
+      "text": "기존 사람 신장 이식이 적합하지 않은 말기신부전 환자에서 안전성과 유효성을 평가하도록 설계됐다.",
+      "source": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT06878560"
+    },
+    "next": {
+      "date": "시험 프로토콜 기준",
+      "text": "초기 코호트의 52주 생존·기능·면역·감염 모니터링 결과"
+    },
+    "constraints": [
+      "면역 거부반응과 장기 기능 지속성",
+      "동물 유래 감염원의 전파 위험과 장기 감시",
+      "공여동물 사육·유전자 편집·장기 품질의 표준화"
+    ],
+    "unknowns": [
+      "반복 가능한 임상 성공률",
+      "표준 면역억제 요법과 장기 부작용",
+      "대량 공급·비용·윤리적 수용성"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "통제된 사람 대상 시험으로 검증 시작",
+        "note": "NCT06878560"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "초기 임상",
+        "value": "말기신부전 환자 대상 이식 시험",
+        "note": "제한된 대상"
+      },
+      {
+        "label": "규제",
+        "state": "progress",
+        "stateLabel": "임상 감독",
+        "value": "FDA 지침 아래 임상 평가",
+        "note": "승인 치료 아님"
+      },
+      {
+        "label": "생산·운영",
+        "state": "progress",
+        "stateLabel": "제한 생산",
+        "value": "유전자 편집 공여동물과 장기 품질 관리 필요",
+        "note": "상업 규모 미확인"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "임상시험 외 일반 접근 없음",
+        "note": "초기 단계"
+      }
+    ],
+    "facts": [
+      {
+        "value": "10 GE",
+        "label": "임상시험에 명시된 유전자 편집 수",
+        "note": "ClinicalTrials.gov 등록 설명"
+      },
+      {
+        "value": "52주",
+        "label": "주요 초기 추적 기간",
+        "note": "등록 시험 설명"
+      },
+      {
+        "value": "ESRD",
+        "label": "대상 질환",
+        "note": "말기신부전 환자"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025",
+        "title": "사람 대상 시험 등록",
+        "text": "10개 유전자 편집 돼지 신장의 안전성과 유효성을 평가하는 시험이 등록됐다.",
+        "kind": "진전",
+        "url": "https://clinicaltrials.gov/study/NCT06878560",
+        "source": "ClinicalTrials.gov"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "규제 범위 재검증",
+        "text": "사이트 판정은 개별 수술 보도가 아니라 FDA 지침과 임상등록 자료에만 근거했다.",
+        "kind": "검증",
+        "url": "https://www.fda.gov/vaccines-blood-biologics/biologics-guidances/xenotransplantation-guidances",
+        "source": "FDA"
+      }
+    ],
+    "sources": [
+      {
+        "type": "임상등록",
+        "publisher": "ClinicalTrials.gov",
+        "title": "10 GE Xenokidney in Patients with ESRD — NCT06878560",
+        "date": "현재 등록",
+        "url": "https://clinicaltrials.gov/study/NCT06878560"
+      },
+      {
+        "type": "규제 지침",
+        "publisher": "U.S. FDA",
+        "title": "Xenotransplantation Guidances",
+        "date": "현재",
+        "url": "https://www.fda.gov/vaccines-blood-biologics/biologics-guidances/xenotransplantation-guidances"
+      },
+      {
+        "type": "규제 설명",
+        "publisher": "U.S. FDA",
+        "title": "Xenotransplantation — risks and oversight",
+        "date": "현재",
+        "url": "https://www.fda.gov/vaccines-blood-biologics/xenotransplantation"
+      }
+    ]
+  },
+  {
+    "id": "stem-cell-islets",
+    "name": "줄기세포 유래 췌도세포 치료",
+    "nameEn": "Stem-cell-derived islet cell therapy",
+    "category": "의료·재생",
+    "status": "후기 임상",
+    "statusKey": "phase3",
+    "trajectory": "mixed",
+    "trajectoryLabel": "투여 재개",
+    "verifiedAt": "2026-08-19",
+    "summary": "줄기세포에서 만든 인슐린 분비 췌도세포를 이식해 제1형 당뇨병의 내인성 인슐린 생산을 회복하려는 접근이다. zimislecel은 표준 면역억제를 병행하는 1/2/3상에서 투여가 진행 중이며, 2025년 제조 분석으로 일시 중단된 뒤 2026년 재개됐다.",
+    "currentState": "표준 면역억제를 병행하는 1/2/3상에서 환자 등록·투여 진행",
+    "access": "중증 저혈당 위험이 큰 제한된 임상시험 대상자",
+    "latest": {
+      "date": "2026-08-03",
+      "title": "1/2/3상 등록과 투여 지속 확인",
+      "text": "Vertex는 zimislecel 연구가 계속 환자를 등록하고 투여 중이라고 보고했다. 승인 신청 일정은 확정되지 않았다.",
+      "source": "Vertex",
+      "url": "https://investors.vrtx.com/news-releases/news-release-details/vertex-reports-second-quarter-2026-financial-results"
+    },
+    "next": {
+      "date": "회사 업데이트 대기",
+      "text": "연구 완료 일정, 장기 인슐린 독립성·안전성, 규제 제출 계획"
+    },
+    "constraints": [
+      "현재 접근은 표준 면역억제가 필요함",
+      "세포 제품의 제조 일관성과 용량·생착 품질",
+      "효과 지속성과 면역억제의 장기 위험"
+    ],
+    "unknowns": [
+      "전체 3상 집단의 주요 결과",
+      "규제 제출 시점",
+      "면역억제 없이 사용할 수 있는 후속 접근의 성과"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "NEJM에 초기 임상 결과 공개, 후기 임상 지속",
+        "note": "소규모·단기 결과"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "후기 임상",
+        "value": "1/2/3상 등록·투여 중",
+        "note": "중증 T1D 대상"
+      },
+      {
+        "label": "규제",
+        "state": "progress",
+        "stateLabel": "임상 허용",
+        "value": "RMAT·Fast Track 지정, 시판 승인 전",
+        "note": "회사 보고"
+      },
+      {
+        "label": "생산·운영",
+        "state": "blocked",
+        "stateLabel": "재검증",
+        "value": "제조 분석으로 일시 중단 후 2026년 투여 재개",
+        "note": "제조가 핵심 병목"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "임상시험 외 일반 접근 없음",
+        "note": "면역억제 필요"
+      }
+    ],
+    "facts": [
+      {
+        "value": "단회",
+        "label": "초기 임상 세포 주입 방식",
+        "note": "초기 임상 프로토콜"
+      },
+      {
+        "value": "면역억제",
+        "label": "현재 zimislecel에 필요한 병행 치료",
+        "note": "회사·논문 자료"
+      },
+      {
+        "value": "2026.05",
+        "label": "내부 제조 분석 뒤 투여 재개",
+        "note": "Vertex 1분기 결과"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025",
+        "title": "초기 임상 결과 공개",
+        "text": "줄기세포 유래 완전 분화 췌도세포의 초기 안전성과 기능 결과가 NEJM에 발표됐다.",
+        "kind": "진전",
+        "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa2506549",
+        "source": "NEJM"
+      },
+      {
+        "date": "2025-11",
+        "title": "투여 완료 일시 연기",
+        "text": "개발사가 내부 제조 분석을 진행하며 연구의 투여 완료를 일시적으로 미뤘다.",
+        "kind": "정체",
+        "url": "https://investors.vrtx.com/news-releases/news-release-details/vertex-reports-fourth-quarter-and-full-year-2025-financial",
+        "source": "Vertex"
+      },
+      {
+        "date": "2026-05-04",
+        "title": "투여 재개",
+        "text": "내부 제조 분석 완료 뒤 여러 환자에서 투여가 재개됐다고 보고됐다.",
+        "kind": "재개",
+        "url": "https://investors.vrtx.com/news-releases/news-release-details/vertex-reports-first-quarter-2026-financial-results",
+        "source": "Vertex"
+      },
+      {
+        "date": "2026-08-03",
+        "title": "연구 지속",
+        "text": "2분기 결과에서 1/2/3상 등록과 투여가 계속되고 있음을 확인했다.",
+        "kind": "검증",
+        "url": "https://investors.vrtx.com/news-releases/news-release-details/vertex-reports-second-quarter-2026-financial-results",
+        "source": "Vertex"
+      }
+    ],
+    "sources": [
+      {
+        "type": "동료평가",
+        "publisher": "New England Journal of Medicine",
+        "title": "Stem Cell–Derived, Fully Differentiated Islets for Type 1 Diabetes",
+        "date": "2025",
+        "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa2506549"
+      },
+      {
+        "type": "회사 공시",
+        "publisher": "Vertex Pharmaceuticals",
+        "title": "First Quarter 2026 Financial Results",
+        "date": "2026-05-04",
+        "url": "https://investors.vrtx.com/news-releases/news-release-details/vertex-reports-first-quarter-2026-financial-results"
+      },
+      {
+        "type": "회사 공시",
+        "publisher": "Vertex Pharmaceuticals",
+        "title": "Second Quarter 2026 Financial Results",
+        "date": "2026-08-03",
+        "url": "https://investors.vrtx.com/news-releases/news-release-details/vertex-reports-second-quarter-2026-financial-results"
+      },
+      {
+        "type": "SEC 공시",
+        "publisher": "U.S. SEC",
+        "title": "Vertex Q2 2026 results exhibit",
+        "date": "2026-08-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000256/ex-991_q22026.htm"
+      }
+    ]
+  },
+  {
+    "id": "perovskite-tandem",
+    "name": "페로브스카이트–실리콘 탠덤 태양전지",
+    "nameEn": "Perovskite–silicon tandem photovoltaics",
+    "category": "에너지·소재",
+    "status": "파일럿",
+    "statusKey": "pilot",
+    "trajectory": "advance",
+    "trajectoryLabel": "스케일업",
+    "verifiedAt": "2026-08-19",
+    "summary": "서로 다른 파장대의 빛을 흡수하는 페로브스카이트와 실리콘을 적층해 단일 실리콘 셀보다 높은 효율을 노리는 기술이다. DOE는 소면적 탠덤 셀 효율이 거의 34%에 도달했다고 정리하지만, 대규모 제조는 아직 이뤄지지 않았다고 명시한다.",
+    "currentState": "소면적 고효율은 확인됐지만 대량 제조·장기 내구성 검증 전",
+    "access": "연구·파일럿 및 제한적 시제품 단계",
+    "latest": {
+      "date": "2026-08-19",
+      "title": "DOE 현재 상태 재검증",
+      "text": "거의 34%의 소면적 탠덤 효율과 함께 ‘아직 규모 제조되지 않음’이라는 병목을 동시에 확인했다.",
+      "source": "U.S. DOE",
+      "url": "https://www.energy.gov/cmei/systems/perovskite-solar-cells"
+    },
+    "next": {
+      "date": "프로젝트별 상이",
+      "text": "대면적 모듈에서 효율·수율·수십 년 내구성·공정 재현성을 함께 입증"
+    },
+    "constraints": [
+      "열·빛·수분에 대한 장기 안정성",
+      "대면적 코팅·증착에서 결함과 수율 관리",
+      "납 등 소재의 환경·회수 관리와 인증"
+    ],
+    "unknowns": [
+      "상업 모듈의 실제 보증기간과 열화율",
+      "기존 실리콘 라인과 결합한 제조원가",
+      "GW급 생산 시점과 수율"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "소면적 탠덤 셀 효율 거의 34%",
+        "note": "DOE 요약"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "파일럿",
+        "value": "미니모듈·프로토타입 생산 연구",
+        "note": "현장 장기 운전 자료 제한"
+      },
+      {
+        "label": "규제·표준",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "내구성·안전·환경 시험 체계 검증 필요",
+        "note": "상업 모듈 인증 전"
+      },
+      {
+        "label": "생산·운영",
+        "state": "blocked",
+        "stateLabel": "병목",
+        "value": "DOE가 대규모 제조 전 단계로 명시",
+        "note": "수율·재현성 핵심"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "일반 시장의 표준 제품 보급 자료 없음",
+        "note": "파일럿 중심"
+      }
+    ],
+    "facts": [
+      {
+        "value": "≈34%",
+        "label": "소면적 페로브스카이트–실리콘 탠덤 효율",
+        "note": "DOE 현재 요약"
+      },
+      {
+        "value": "$7M",
+        "label": "PIPPIN 프로젝트 DOE 지원액",
+        "note": "prototype-to-production 연구"
+      },
+      {
+        "value": "미도달",
+        "label": "DOE가 확인한 대규모 제조 상태",
+        "note": "‘not yet manufactured at scale’"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2009",
+        "title": "초기 효율 약 3%",
+        "text": "DOE는 페로브스카이트 소면적 셀 효율이 2009년 약 3%에서 빠르게 상승했다고 정리한다.",
+        "kind": "기준",
+        "url": "https://www.energy.gov/cmei/systems/perovskite-solar-cells",
+        "source": "U.S. DOE"
+      },
+      {
+        "date": "2024-05-16",
+        "title": "스케일업 프로젝트 지원",
+        "text": "DOE가 내구성·대면적 제조·공정 제어를 다루는 탠덤 프로젝트들을 지원했다.",
+        "kind": "진전",
+        "url": "https://www.energy.gov/cmei/systems/advancing-us-thin-film-solar-photovoltaics-funding-program",
+        "source": "U.S. DOE"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "효율과 제조 간 격차 재확인",
+        "text": "소면적 효율 기록과 대량 제조 미도달 상태를 한 판정에 함께 반영했다.",
+        "kind": "검증",
+        "url": "https://www.energy.gov/cmei/systems/perovskite-solar-cells",
+        "source": "U.S. DOE"
+      }
+    ],
+    "sources": [
+      {
+        "type": "정부 기술요약",
+        "publisher": "U.S. Department of Energy",
+        "title": "Perovskite Solar Cells",
+        "date": "현재",
+        "url": "https://www.energy.gov/cmei/systems/perovskite-solar-cells"
+      },
+      {
+        "type": "정부 프로젝트",
+        "publisher": "U.S. Department of Energy",
+        "title": "Advancing U.S. Thin-Film Solar Photovoltaics Funding Program",
+        "date": "2024-05-16",
+        "url": "https://www.energy.gov/cmei/systems/advancing-us-thin-film-solar-photovoltaics-funding-program"
+      },
+      {
+        "type": "정부 연구방향",
+        "publisher": "U.S. Department of Energy",
+        "title": "Perovskite Research Directions",
+        "date": "현재",
+        "url": "https://www.energy.gov/cmei/systems/perovskite-research-directions"
+      }
+    ]
+  },
+  {
+    "id": "enhanced-geothermal",
+    "name": "향상형 지열 시스템",
+    "nameEn": "Enhanced geothermal systems (EGS)",
+    "category": "에너지·지하",
+    "status": "현장 실증",
+    "statusKey": "field",
+    "trajectory": "advance",
+    "trajectoryLabel": "현장 시험",
+    "verifiedAt": "2026-08-19",
+    "summary": "자연적으로 투수성이 낮은 고온 암반에 인공 저류층을 만들어 열을 회수하는 지열 기술이다. 미국 DOE는 서로 다른 지질·지리 조건에서 네 개의 EGS 실증 프로젝트를 지원하고 있으며, 2026년에는 펜실베이니아 현장 시험 프로젝트 선정을 발표했다.",
+    "currentState": "서로 다른 지질 조건에서 정부 지원 현장 실증 진행",
+    "access": "프로젝트 단위 전력·열 실증, 일반 소비자 직접 접근 대상 아님",
+    "latest": {
+      "date": "2026-04-14",
+      "title": "펜실베이니아 EGS 실증 프로젝트에 1,400만 달러 선정",
+      "text": "DOE는 동부 미국의 현장 시험을 지원하는 프로젝트 선정을 발표했다. 선정은 최종 지원 확약과 동일하지 않다.",
+      "source": "U.S. DOE",
+      "url": "https://www.energy.gov/hgeo/articles/us-department-energy-announces-14-million-enhanced-geothermal-systems-demonstration"
+    },
+    "next": {
+      "date": "프로젝트별 상이",
+      "text": "현장 유량·열회수·시추비·유발지진·장기 저류층 성능 데이터"
+    },
+    "constraints": [
+      "고온 심부 시추 비용과 속도",
+      "저류층 유량 유지와 열 고갈 관리",
+      "유발지진·수자원·지역 허가와 사회적 수용"
+    ],
+    "unknowns": [
+      "다양한 지질에서의 반복 가능한 경제성",
+      "상업 프로젝트의 실제 균등화발전비용",
+      "지역별 허가·송전 연결 기간"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "암반 자극·순환을 통한 열회수 원리는 실증 축적",
+        "note": "DOE 프로그램"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "현장 실증",
+        "value": "네 개의 DOE 파일럿 프로젝트",
+        "note": "다양한 지질 조건"
+      },
+      {
+        "label": "규제·표준",
+        "state": "progress",
+        "stateLabel": "지역별",
+        "value": "시추·지하수·유발지진 허가가 프로젝트별 필요",
+        "note": "통합 상태 미확인"
+      },
+      {
+        "label": "생산·운영",
+        "state": "progress",
+        "stateLabel": "검증 중",
+        "value": "시추·완결 비용과 장기 유량 반복성 평가",
+        "note": "현장 데이터 대기"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "상업 전력 공급 성과는 프로젝트별 확인 필요",
+        "note": "일괄 판정 안 함"
+      }
+    ],
+    "facts": [
+      {
+        "value": "4",
+        "label": "DOE 지원 EGS 실증 프로젝트 수",
+        "note": "공식 pilot demonstrations 페이지"
+      },
+      {
+        "value": "$14M",
+        "label": "2026년 펜실베이니아 프로젝트 선정액",
+        "note": "award negotiation 대상"
+      },
+      {
+        "value": "현장",
+        "label": "현재 핵심 검증 위치",
+        "note": "실험실이 아닌 다양한 지질 조건"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023",
+        "title": "1차 파일럿 선정",
+        "text": "DOE가 EGS를 서로 다른 지질 조건에서 시험하는 첫 실증 프로젝트들을 선정했다.",
+        "kind": "진전",
+        "url": "https://www.energy.gov/hgeo/geothermal/egs-pilot-demonstrations",
+        "source": "U.S. DOE"
+      },
+      {
+        "date": "2024-06-25",
+        "title": "2차 실증 공고",
+        "text": "동부 미국을 포함해 EGS 확장성과 효과를 시험하는 추가 지원 기회가 발표됐다.",
+        "kind": "진전",
+        "url": "https://www.energy.gov/hgeo/geothermal/articles/doe-announces-142-million-advance-enhanced-geothermal-systems",
+        "source": "U.S. DOE"
+      },
+      {
+        "date": "2026-04-14",
+        "title": "펜실베이니아 프로젝트 선정",
+        "text": "1,400만 달러 규모 현장 시험 프로젝트가 award negotiation 대상으로 선정됐다.",
+        "kind": "진전",
+        "url": "https://www.energy.gov/hgeo/articles/us-department-energy-announces-14-million-enhanced-geothermal-systems-demonstration",
+        "source": "U.S. DOE"
+      }
+    ],
+    "sources": [
+      {
+        "type": "정부 프로그램",
+        "publisher": "U.S. Department of Energy",
+        "title": "EGS Pilot Demonstrations",
+        "date": "현재",
+        "url": "https://www.energy.gov/hgeo/geothermal/egs-pilot-demonstrations"
+      },
+      {
+        "type": "정부 발표",
+        "publisher": "U.S. Department of Energy",
+        "title": "$14 Million for EGS Demonstration Project",
+        "date": "2026-04-14",
+        "url": "https://www.energy.gov/hgeo/articles/us-department-energy-announces-14-million-enhanced-geothermal-systems-demonstration"
+      },
+      {
+        "type": "정부 기술요약",
+        "publisher": "U.S. Department of Energy",
+        "title": "Enhanced Geothermal Systems",
+        "date": "현재",
+        "url": "https://www.energy.gov/hgeo/geothermal/enhanced-geothermal-systems"
+      }
+    ]
+  },
+  {
+    "id": "direct-air-capture",
+    "name": "직접공기포집",
+    "nameEn": "Direct air capture with storage",
+    "category": "기후·탄소",
+    "status": "현장 실증",
+    "statusKey": "field",
+    "trajectory": "mixed",
+    "trajectoryLabel": "규모 검증",
+    "verifiedAt": "2026-08-19",
+    "summary": "대기 중 희박한 이산화탄소를 직접 분리해 저장하거나 제품에 사용하는 기술이다. 운영 시설은 존재하지만 대규모 순제거 실적은 제한적이다. 미국의 지역 DAC 허브는 각각 연간 최소 100만 톤 잠재 규모를 목표로 하는 실증 프로그램이며, 실제 운전 실적과 동일하지 않다.",
+    "currentState": "소규모 운영 시설은 존재하나 백만 톤급 순제거는 실증·건설 검증 단계",
+    "access": "기업 구매계약·프로젝트 기반, 대중 인프라 아님",
+    "latest": {
+      "date": "2026-08-19",
+      "title": "DOE 허브 프로그램과 IEA 추적 범위 재검증",
+      "text": "네 개의 미국 허브는 각각 연 100만 톤 이상 잠재력을 목표로 하지만, 프로그램 목표를 실제 포집량으로 계산하지 않았다.",
+      "source": "DOE / IEA",
+      "url": "https://www.energy.gov/oced/DACHubs"
+    },
+    "next": {
+      "date": "프로젝트별 상이",
+      "text": "허브 건설·시운전, 검증된 순제거량, 에너지 사용, 영구 저장, 톤당 실제 비용"
+    },
+    "constraints": [
+      "희박한 CO₂ 분리에 필요한 에너지와 비용",
+      "포집량이 아니라 순제거량을 검증하는 MRV 체계",
+      "지질 저장·운송 인프라와 장기 책임"
+    ],
+    "unknowns": [
+      "백만 톤급 시설의 실제 가동률",
+      "보조금 제외 톤당 장기 비용",
+      "전력·열원에 따른 순제거 효과"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "공기에서 CO₂를 분리하고 저장하는 공정은 운전 사례 존재",
+        "note": "IEA 추적"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "현장 실증",
+        "value": "운영·건설·계획 프로젝트가 혼재",
+        "note": "규모 차이 큼"
+      },
+      {
+        "label": "규제·표준",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "저장 허가와 MRV가 프로젝트별 필요",
+        "note": "공통 표준 정착 중"
+      },
+      {
+        "label": "생산·운영",
+        "state": "blocked",
+        "stateLabel": "병목",
+        "value": "백만 톤급 가동률·에너지·비용 검증 전",
+        "note": "프로그램 목표와 실적 구분"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "제한된 기업 계약 중심",
+        "note": "대중 서비스 아님"
+      }
+    ],
+    "facts": [
+      {
+        "value": "4",
+        "label": "미국 지역 DAC 허브 프로그램 수",
+        "note": "DOE OCED"
+      },
+      {
+        "value": "≥1 Mt/y",
+        "label": "허브별 잠재 포집 규모 목표",
+        "note": "실제 운전량이 아닌 프로그램 요건"
+      },
+      {
+        "value": "≥1 kt/y",
+        "label": "IEA DAC 프로젝트 추적 기준",
+        "note": "CCUS Projects Explorer"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022",
+        "title": "IEA 규모 격차 정리",
+        "text": "IEA는 당시 운영 DAC 시설 대부분이 소규모이며 대규모 확대가 필요하다고 정리했다.",
+        "kind": "기준",
+        "url": "https://www.iea.org/reports/direct-air-capture-2022/executive-summary",
+        "source": "IEA"
+      },
+      {
+        "date": "2024-12",
+        "title": "미국 허브 추가 지원 공고",
+        "text": "DOE가 지역 DAC 허브 프로그램의 추가 공고를 게시했다.",
+        "kind": "진전",
+        "url": "https://www.energy.gov/oced/DACHubs",
+        "source": "U.S. DOE"
+      },
+      {
+        "date": "2026-06",
+        "title": "CCUS 최신 추적 갱신",
+        "text": "IEA는 CCUS 프로젝트 탐색기 기반 최신 현황을 2026년 6월 기준으로 제공했다.",
+        "kind": "검증",
+        "url": "https://www.iea.org/energy-system/renewables-and-low-emissions/carbon-capture-utilisation-and-storage",
+        "source": "IEA"
+      }
+    ],
+    "sources": [
+      {
+        "type": "국제기구 분석",
+        "publisher": "International Energy Agency",
+        "title": "Direct Air Capture — executive summary",
+        "date": "2022",
+        "url": "https://www.iea.org/reports/direct-air-capture-2022/executive-summary"
+      },
+      {
+        "type": "정부 프로그램",
+        "publisher": "U.S. Department of Energy",
+        "title": "Regional Direct Air Capture Hubs",
+        "date": "현재",
+        "url": "https://www.energy.gov/oced/DACHubs"
+      },
+      {
+        "type": "국제 데이터",
+        "publisher": "International Energy Agency",
+        "title": "CCUS Projects Explorer",
+        "date": "2026",
+        "url": "https://www.iea.org/data-and-statistics/data-tools/ccus-projects-explorer"
+      },
+      {
+        "type": "국제기구 현황",
+        "publisher": "International Energy Agency",
+        "title": "Carbon capture, utilisation and storage — latest findings",
+        "date": "2026-06",
+        "url": "https://www.iea.org/energy-system/renewables-and-low-emissions/carbon-capture-utilisation-and-storage"
+      }
+    ]
+  },
+  {
+    "id": "fusion-power",
+    "name": "핵융합 발전",
+    "nameEn": "Fusion power",
+    "category": "에너지·핵융합",
+    "status": "연구·실증",
+    "statusKey": "research",
+    "trajectory": "advance",
+    "trajectoryLabel": "기술 격차 축소",
+    "verifiedAt": "2026-08-19",
+    "summary": "핵융합 반응의 과학적 성과와 장치 성능은 진전했지만, 발전소 수준의 연속 운전·연료주기·재료·열회수·전력망 공급은 별개의 미해결 과제다. 미국 DOE의 2026 로드맵은 중반 2030년대 파일럿 목표를 정책 목표로 제시하며 예측이나 보장을 의미하지 않는다.",
+    "currentState": "과학적 점화 성과는 있으나 전력망에 공급하는 융합 발전소는 없음",
+    "access": "연구시설·민간 개발 프로젝트 단계",
+    "latest": {
+      "date": "2026-06-10",
+      "title": "미국 DOE 최종 Fusion S&T Roadmap 공개",
+      "text": "구조재·플라즈마 대면 부품·가둠·연료주기·블랭킷·플랜트 통합의 여섯 과제를 제시했다.",
+      "source": "U.S. DOE",
+      "url": "https://www.energy.gov/articles/energy-department-releases-finalized-fusion-science-and-technology-roadmap-accelerate"
+    },
+    "next": {
+      "date": "로드맵별 상이",
+      "text": "발전소 관련 재료 수명, 삼중수소 연료주기, 열회수·블랭킷, 연속 운전, 순전력 실증"
+    },
+    "constraints": [
+      "고중성자 환경에서 견디는 구조재와 플라즈마 대면 부품",
+      "삼중수소 증식·회수·재고를 포함한 닫힌 연료주기",
+      "반응 에너지를 안정적인 순전력으로 전환하는 플랜트 통합"
+    ],
+    "unknowns": [
+      "파일럿 발전소의 실제 준공 시점",
+      "순전력·가동률·유지보수 비용",
+      "규제 체계와 상업 공급망"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "NIF에서 점화 기준 달성 사례",
+        "note": "발전소 실증과는 별개"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "연구·실증",
+        "value": "대형 실험장치와 민간 프로토타입 개발",
+        "note": "전력망 공급 없음"
+      },
+      {
+        "label": "규제·표준",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "상업 발전소 규제·허가 체계 형성 중",
+        "note": "국가별 상이"
+      },
+      {
+        "label": "생산·운영",
+        "state": "blocked",
+        "stateLabel": "핵심 병목",
+        "value": "재료·연료주기·블랭킷·플랜트 통합 미완",
+        "note": "DOE 6대 과제"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "상업 전력 제공 전",
+        "note": "정책 목표를 도착일로 간주하지 않음"
+      }
+    ],
+    "facts": [
+      {
+        "value": "6",
+        "label": "DOE 로드맵 핵심 과제 영역",
+        "note": "재료부터 플랜트 통합까지"
+      },
+      {
+        "value": "800+",
+        "label": "로드맵 작성에 참여한 과학자·엔지니어",
+        "note": "DOE 발표"
+      },
+      {
+        "value": "mid-2030s",
+        "label": "미국 정책상 파일럿·상업 목표",
+        "note": "예측이나 보장 아님"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022-12",
+        "title": "NIF 점화 발표",
+        "text": "DOE 국립연구소가 관성가둠 실험에서 fusion ignition을 달성했다고 발표했다.",
+        "kind": "진전",
+        "url": "https://www.energy.gov/articles/doe-national-laboratory-makes-history-achieving-fusion-ignition",
+        "source": "U.S. DOE"
+      },
+      {
+        "date": "2024",
+        "title": "ITER 새 기준선 채택",
+        "text": "ITER는 단계별 과학 운전과 장치 조립 일정을 조정한 새 기준선을 공개했다.",
+        "kind": "일정 변경",
+        "url": "https://www.iter.org/few-lines",
+        "source": "ITER"
+      },
+      {
+        "date": "2026-06-10",
+        "title": "최종 미국 로드맵",
+        "text": "DOE가 여섯 기술 과제와 인프라 이정표를 포함한 최종 로드맵을 발표했다.",
+        "kind": "진전",
+        "url": "https://www.energy.gov/articles/energy-department-releases-finalized-fusion-science-and-technology-roadmap-accelerate",
+        "source": "U.S. DOE"
+      }
+    ],
+    "sources": [
+      {
+        "type": "정부 로드맵",
+        "publisher": "U.S. Department of Energy",
+        "title": "Finalized Fusion Science and Technology Roadmap",
+        "date": "2026-06-10",
+        "url": "https://www.energy.gov/articles/energy-department-releases-finalized-fusion-science-and-technology-roadmap-accelerate"
+      },
+      {
+        "type": "정부 실험결과",
+        "publisher": "U.S. Department of Energy",
+        "title": "DOE National Laboratory Achieves Fusion Ignition",
+        "date": "2022-12",
+        "url": "https://www.energy.gov/articles/doe-national-laboratory-makes-history-achieving-fusion-ignition"
+      },
+      {
+        "type": "국제 프로젝트",
+        "publisher": "ITER Organization",
+        "title": "ITER in a few lines — project baseline",
+        "date": "현재",
+        "url": "https://www.iter.org/few-lines"
+      }
+    ]
+  },
+  {
+    "id": "fault-tolerant-quantum",
+    "name": "오류보정 양자컴퓨팅",
+    "nameEn": "Fault-tolerant quantum computing",
+    "category": "컴퓨팅·양자",
+    "status": "연구·검증",
+    "statusKey": "research",
+    "trajectory": "advance",
+    "trajectoryLabel": "구성요소 검증",
+    "verifiedAt": "2026-08-19",
+    "summary": "물리 큐비트의 오류를 여러 큐비트와 반복 측정으로 억제해 긴 계산을 가능하게 하는 기술이다. 동료평가 연구에서 오류보정 임계값 아래 동작이 보고됐지만, 범용 대규모 fault-tolerant 시스템은 아직 제공되지 않는다. 기업 로드맵은 목표일 뿐 실제 달성 상태와 분리해 표시한다.",
+    "currentState": "임계값 이하 오류보정과 논리 구성요소 검증, 대규모 시스템은 미도달",
+    "access": "연구용 장비·클라우드 실험, 완전 오류보정 시스템 아님",
+    "latest": {
+      "date": "2026",
+      "title": "실시간 오류보정 디코더와 논리 모듈 시연을 기업 목표로 제시",
+      "text": "IBM은 2026 로드맵에 디코더 프로토타입과 논리 처리·메모리 모듈을 명시했다. 이 항목은 완료 실적이 아니라 기업 목표로 분류한다.",
+      "source": "IBM",
+      "url": "https://www.ibm.com/roadmaps/quantum/2026/"
+    },
+    "next": {
+      "date": "2026 로드맵",
+      "text": "실시간 디코더, 논리 처리장치와 양자 메모리 모듈의 공개 검증 결과"
+    },
+    "constraints": [
+      "논리 오류율을 낮추면서 큐비트·측정·제어를 대규모로 확장",
+      "magic-state distillation과 범용 명령 집합",
+      "저온·제어전자·보정 소프트웨어의 시스템 통합"
+    ],
+    "unknowns": [
+      "기업별 로드맵 달성 여부",
+      "실용 알고리즘에서 필요한 논리 큐비트·게이트 수",
+      "총 시스템 비용과 가용성"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "동료평가 연구에서 below-threshold surface-code memory 보고",
+        "note": "Nature 2025"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "연구",
+        "value": "논리 메모리·디코더·모듈 구성요소 개발",
+        "note": "범용 FTQC 아님"
+      },
+      {
+        "label": "규제·표준",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "성능 비교와 보안 표준이 정착 전",
+        "note": "상용 기준 불통일"
+      },
+      {
+        "label": "생산·운영",
+        "state": "blocked",
+        "stateLabel": "병목",
+        "value": "대규모 큐비트·제어·냉각·오류보정 통합 미완",
+        "note": "기업별 아키텍처 상이"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "완전 오류보정 시스템의 고객 제공 전",
+        "note": "로드맵 목표와 현재 분리"
+      }
+    ],
+    "facts": [
+      {
+        "value": "2026",
+        "label": "IBM 실시간 디코더 프로토타입 목표",
+        "note": "기업 로드맵"
+      },
+      {
+        "value": "2029",
+        "label": "IBM Starling 제공 목표",
+        "note": "200 논리 큐비트·1억 게이트, 미달성 목표"
+      },
+      {
+        "value": "below threshold",
+        "label": "동료평가된 오류보정 핵심 결과",
+        "note": "Nature 논문"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025",
+        "title": "below-threshold 결과 발표",
+        "text": "surface-code 논리 메모리에서 오류보정 임계값 아래 동작을 보고한 연구가 Nature에 게재됐다.",
+        "kind": "진전",
+        "url": "https://www.nature.com/articles/s41586-024-08449-y",
+        "source": "Nature"
+      },
+      {
+        "date": "2026",
+        "title": "실시간 디코더 목표",
+        "text": "IBM은 2026년에 실시간 오류보정 디코더와 논리 모듈 시연을 목표로 제시했다.",
+        "kind": "예정",
+        "url": "https://www.ibm.com/roadmaps/quantum/2026/",
+        "source": "IBM"
+      },
+      {
+        "date": "2029",
+        "title": "Starling 목표",
+        "text": "IBM은 200 논리 큐비트와 1억 게이트 시스템을 2029 목표로 제시한다. 현재 실적이 아니다.",
+        "kind": "기업 목표",
+        "url": "https://www.ibm.com/roadmaps/quantum/2030/",
+        "source": "IBM"
+      }
+    ],
+    "sources": [
+      {
+        "type": "동료평가",
+        "publisher": "Nature",
+        "title": "Quantum error correction below the surface code threshold",
+        "date": "2025",
+        "url": "https://www.nature.com/articles/s41586-024-08449-y"
+      },
+      {
+        "type": "기업 로드맵",
+        "publisher": "IBM",
+        "title": "Quantum 2026 — real-time decoder and logical module goals",
+        "date": "2026",
+        "url": "https://www.ibm.com/roadmaps/quantum/2026/"
+      },
+      {
+        "type": "기업 로드맵",
+        "publisher": "IBM",
+        "title": "IBM Quantum Roadmap",
+        "date": "현재",
+        "url": "https://www.ibm.com/roadmaps/quantum/"
+      }
+    ]
+  },
+  {
+    "id": "robotaxi",
+    "name": "무인 로보택시",
+    "nameEn": "Driverless robotaxi deployment",
+    "category": "모빌리티·자율주행",
+    "status": "제한 상용",
+    "statusKey": "limited",
+    "trajectory": "advance",
+    "trajectoryLabel": "지역 확대",
+    "verifiedAt": "2026-08-19",
+    "summary": "일부 사업자는 운전자 없는 차량을 유료 운송에 투입하고 있지만, 이는 특정 지역·차량·속도·운행조건으로 정의된 ODD 안에서의 배포다. 캘리포니아 DMV는 시험과 배포 허가를 구분하고 사업자별 승인 지역을 공개한다.",
+    "currentState": "캘리포니아 특정 ODD에서 무인 배포 허가, 무제한 자율주행은 아님",
+    "access": "승인된 서비스 지역과 운영 조건 안에서 제한 이용",
+    "latest": {
+      "date": "2026-08-12",
+      "title": "캘리포니아 AV 허가 보유자 목록 갱신",
+      "text": "DMV가 안전운전자 시험, 무인 시험, 배포를 서로 다른 허가 범주로 관리하고 있음을 재확인했다.",
+      "source": "California DMV",
+      "url": "https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/"
+    },
+    "next": {
+      "date": "사업자·지역별 상이",
+      "text": "새 규정 아래 지역 확대, 안전사례 제출, 충돌·비상개입 데이터의 일관된 공개"
+    },
+    "constraints": [
+      "승인 지역 밖과 예외적 도로 상황에서의 일반화",
+      "충돌·원격지원·비상대응의 투명한 성능 측정",
+      "지역사회 승인과 책임·보험·운송 규제"
+    ],
+    "unknowns": [
+      "도시별 실제 이용 가능 범위와 서비스 품질",
+      "비개입 자율성의 비교 가능한 지표",
+      "전국 단위 일반화 시점"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "공공도로 장거리 시험·배포 경험 축적",
+        "note": "업체별 성능 차이"
+      },
+      {
+        "label": "실사용",
+        "state": "confirmed",
+        "stateLabel": "제한 상용",
+        "value": "승인된 ODD 안의 driverless deployment",
+        "note": "지역 제한"
+      },
+      {
+        "label": "규제",
+        "state": "confirmed",
+        "stateLabel": "허가",
+        "value": "DMV 시험·무인시험·배포 허가 체계",
+        "note": "사업자별 조건"
+      },
+      {
+        "label": "생산·운영",
+        "state": "progress",
+        "stateLabel": "확장 중",
+        "value": "차량·원격지원·지도·정비 운영망 확대",
+        "note": "원가 미확인"
+      },
+      {
+        "label": "접근성",
+        "state": "progress",
+        "stateLabel": "제한 접근",
+        "value": "일부 도시·구역에서 이용 가능",
+        "note": "보편 서비스 아님"
+      }
+    ],
+    "facts": [
+      {
+        "value": "3",
+        "label": "캘리포니아 AV 허가 범주",
+        "note": "안전운전자 시험·무인 시험·배포"
+      },
+      {
+        "value": "24/7",
+        "label": "Waymo 승인 ODD의 시간 범위",
+        "note": "DMV 페이지, 지역별 조건은 별도"
+      },
+      {
+        "value": "2026.04",
+        "label": "새 캘리포니아 AV 규정 채택",
+        "note": "감독·보고 요건 강화"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2021-09",
+        "title": "Waymo 배포 허가",
+        "text": "샌프란시스코 카운티와 인접 지역에서 배포 허가를 받았다.",
+        "kind": "진전",
+        "url": "https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/waymo-approved-areas-of-operation-for-driverless-testing-and-deployment/",
+        "source": "California DMV"
+      },
+      {
+        "date": "2025-11",
+        "title": "승인 지역 추가 확대",
+        "text": "북부·남부 캘리포니아의 추가 지역과 새 차량 플랫폼이 승인됐다.",
+        "kind": "진전",
+        "url": "https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/waymo-approved-areas-of-operation-for-driverless-testing-and-deployment/",
+        "source": "California DMV"
+      },
+      {
+        "date": "2026-04-28",
+        "title": "새 AV 규정 채택",
+        "text": "캘리포니아 DMV가 감독과 집행, 중대형 차량까지 포함하는 새 규정을 발표했다.",
+        "kind": "규제 변경",
+        "url": "https://www.dmv.ca.gov/portal/news-and-media/new-autonomous-vehicle-regulations-strengthen-oversight-and-enforcement-authorize-trucks-and-transit/",
+        "source": "California DMV"
+      },
+      {
+        "date": "2026-08-12",
+        "title": "허가 목록 갱신",
+        "text": "현재 시험·무인시험·배포 허가 보유자 목록이 갱신됐다.",
+        "kind": "검증",
+        "url": "https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/",
+        "source": "California DMV"
+      }
+    ],
+    "sources": [
+      {
+        "type": "규제기관",
+        "publisher": "California DMV",
+        "title": "Autonomous Vehicle Permit Holders",
+        "date": "2026-08-12",
+        "url": "https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/"
+      },
+      {
+        "type": "허가 범위",
+        "publisher": "California DMV",
+        "title": "Waymo Approved Areas of Operation",
+        "date": "현재",
+        "url": "https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/waymo-approved-areas-of-operation-for-driverless-testing-and-deployment/"
+      },
+      {
+        "type": "규제 발표",
+        "publisher": "California DMV",
+        "title": "New Autonomous Vehicle Regulations",
+        "date": "2026-04-28",
+        "url": "https://www.dmv.ca.gov/portal/news-and-media/new-autonomous-vehicle-regulations-strengthen-oversight-and-enforcement-authorize-trucks-and-transit/"
+      }
+    ]
+  },
+  {
+    "id": "implantable-bci",
+    "name": "침습형 뇌–컴퓨터 인터페이스",
+    "nameEn": "Implantable brain–computer interface",
+    "category": "컴퓨팅·신경공학",
+    "status": "초기 임상",
+    "statusKey": "phase1",
+    "trajectory": "advance",
+    "trajectoryLabel": "초기 임상",
+    "verifiedAt": "2026-08-19",
+    "summary": "뇌에 전극을 삽입해 신경신호로 컴퓨터나 보조기기를 제어하는 기술이다. Neuralink PRIME은 최초 인체 early-feasibility 연구로 등록돼 있으며, 연계 CONVOY와 UAE-PRIME 연구도 등록돼 있다. 소비자 제품이 아니라 임상 안전성과 기능을 검증하는 단계다.",
+    "currentState": "소수 참가자의 초기 임상에서 임플란트 안전성과 기기 기능 평가",
+    "access": "선정된 임상시험 참가자만 접근 가능",
+    "latest": {
+      "date": "2026-08-19",
+      "title": "PRIME·CONVOY·UAE-PRIME 등록 상태 재검증",
+      "text": "세 등록 연구 모두 의료적 early-feasibility·기능 검증 범위로 분류했다. 일반 소비자 접근이나 승인 제품으로 표시하지 않았다.",
+      "source": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT06429735"
+    },
+    "next": {
+      "date": "시험별 상이",
+      "text": "장기 임플란트 안전성, 신호 안정성, 일상 사용 성능, 참가자 수와 부작용 공개"
+    },
+    "constraints": [
+      "뇌수술과 장기 삽입의 안전성",
+      "전극·신호의 장기 안정성과 재교정 부담",
+      "일상 환경에서의 신뢰성·보안·개인정보"
+    ],
+    "unknowns": [
+      "장기 추적 결과와 기기 교체 주기",
+      "다양한 장애 유형에서의 일반화",
+      "승인 경로·가격·임상 서비스 모델"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "신경신호 기반 기기 제어를 사람 대상 연구에서 평가",
+        "note": "early feasibility"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "초기 임상",
+        "value": "보조기기·컴퓨터 제어 기능 연구",
+        "note": "소수 참가자"
+      },
+      {
+        "label": "규제",
+        "state": "progress",
+        "stateLabel": "임상 허용",
+        "value": "임상시험 등록·감독 단계",
+        "note": "시판 승인 아님"
+      },
+      {
+        "label": "생산·운영",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "수술·장치·지원 서비스의 상업 운영 자료 없음",
+        "note": "초기 단계"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "일반 접근 없음",
+        "note": "임상시험 대상"
+      }
+    ],
+    "facts": [
+      {
+        "value": "3",
+        "label": "확인된 Neuralink 연계 등록 연구",
+        "note": "PRIME·CONVOY·UAE-PRIME"
+      },
+      {
+        "value": "FIH",
+        "label": "PRIME 연구 성격",
+        "note": "first-in-human early feasibility"
+      },
+      {
+        "value": "의료",
+        "label": "현재 목표 범위",
+        "note": "보조기기 제어·기능 회복 연구"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024",
+        "title": "PRIME 임상 등록",
+        "text": "N1 Implant와 R1 Robot의 초기 임상 안전성과 기능을 평가하는 first-in-human 연구가 등록됐다.",
+        "kind": "진전",
+        "url": "https://clinicaltrials.gov/study/NCT06429735",
+        "source": "ClinicalTrials.gov"
+      },
+      {
+        "date": "2024-2025",
+        "title": "CONVOY 연계 연구",
+        "text": "PRIME 참가자가 보조기기를 제어하는 가능성을 탐색하는 연계 연구가 등록됐다.",
+        "kind": "확장",
+        "url": "https://clinicaltrials.gov/study/NCT06710626",
+        "source": "ClinicalTrials.gov"
+      },
+      {
+        "date": "2025",
+        "title": "UAE-PRIME 등록",
+        "text": "UAE에서 초기 안전성과 기능을 평가하는 별도 feasibility 연구가 등록됐다.",
+        "kind": "확장",
+        "url": "https://clinicaltrials.gov/study/NCT06992596",
+        "source": "ClinicalTrials.gov"
+      }
+    ],
+    "sources": [
+      {
+        "type": "임상등록",
+        "publisher": "ClinicalTrials.gov",
+        "title": "PRIME Study — NCT06429735",
+        "date": "현재 등록",
+        "url": "https://clinicaltrials.gov/study/NCT06429735"
+      },
+      {
+        "type": "임상등록",
+        "publisher": "ClinicalTrials.gov",
+        "title": "CONVOY Study — NCT06710626",
+        "date": "현재 등록",
+        "url": "https://clinicaltrials.gov/study/NCT06710626"
+      },
+      {
+        "type": "임상등록",
+        "publisher": "ClinicalTrials.gov",
+        "title": "UAE-PRIME — NCT06992596",
+        "date": "현재 등록",
+        "url": "https://clinicaltrials.gov/study/NCT06992596"
+      }
+    ]
+  },
+  {
+    "id": "humanoid-robots",
+    "name": "범용 휴머노이드 로봇",
+    "nameEn": "General-purpose humanoid robots",
+    "category": "로봇·제조",
+    "status": "현장 실증",
+    "statusKey": "field",
+    "trajectory": "mixed",
+    "trajectoryLabel": "실사용 검증",
+    "verifiedAt": "2026-08-19",
+    "summary": "인간형 몸체로 여러 작업을 수행하는 로봇이다. 산업 현장 파일럿은 늘고 있지만 IFR는 신뢰성·사이클타임·에너지·유지보수·안전이 전통 자동화와 경쟁하려면 검증돼야 한다고 지적한다. 표준화된 글로벌 휴머노이드 판매·가동 통계는 이제 별도 수집이 시작된 단계다.",
+    "currentState": "공장·창고의 실제 환경 시험이 시작됐으나 범용성과 경제성은 미검증",
+    "access": "기업 파일럿·개발자 프로그램 중심",
+    "latest": {
+      "date": "2026-01-08",
+      "title": "IFR가 2026 핵심 과제로 신뢰성·효율 입증을 제시",
+      "text": "실제 환경 배치는 늘지만 사이클타임, 에너지, 유지보수 비용, 안전, 인간 수준의 생산성이 검증 기준이라고 정리했다.",
+      "source": "IFR",
+      "url": "https://ifr.org/ifr-press-releases/news/top-5-global-robotics-trends-2026"
+    },
+    "next": {
+      "date": "2026 통계 공개 대기",
+      "text": "IFR의 전용 휴머노이드 통계와 실제 현장 가동률·개입률·유지보수·작업당 비용"
+    },
+    "constraints": [
+      "장시간 반복 작업의 신뢰성과 고장 간격",
+      "사이클타임·에너지·유지보수 비용",
+      "안전 인증과 예측 불가능한 환경에서의 인간 감독"
+    ],
+    "unknowns": [
+      "공개 검증된 누적 가동시간과 작업 성공률",
+      "전통 로봇·인력 대비 총소유비용",
+      "‘범용’ 작업 전환에 필요한 재학습·통합 비용"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "보행·조작·학습 구성요소 성능 향상",
+        "note": "통합 범용성 별도"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "현장 실증",
+        "value": "자동차·창고·제조 파일럿 확대",
+        "note": "제한된 작업"
+      },
+      {
+        "label": "규제·표준",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "ISO 안전 기준과 책임 체계 적용 필요",
+        "note": "IFR 지적"
+      },
+      {
+        "label": "생산·운영",
+        "state": "blocked",
+        "stateLabel": "병목",
+        "value": "신뢰성·사이클타임·에너지·정비 비용 미검증",
+        "note": "전통 자동화와 비교 필요"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "표준 제품의 대규모 보급 통계 없음",
+        "note": "IFR 전용 통계 수집 시작"
+      }
+    ],
+    "facts": [
+      {
+        "value": "2026",
+        "label": "IFR 전용 휴머노이드 통계 수집 시작",
+        "note": "2025 판매·RaaS 데이터"
+      },
+      {
+        "value": "5",
+        "label": "IFR가 제시한 핵심 운영 검증 요소",
+        "note": "신뢰성·사이클·에너지·정비·안전"
+      },
+      {
+        "value": "미공개",
+        "label": "표준화된 글로벌 설치·판매 총계",
+        "note": "현 시점에서 추정치 사용 안 함"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-08-14",
+        "title": "Vision and Reality 보고서",
+        "text": "IFR가 휴머노이드의 기회와 한계, 지역별 차이를 구분한 포지션 페이퍼를 공개했다.",
+        "kind": "검증",
+        "url": "https://ifr.org/ifr-press-releases/humanoid-robots-vision-and-reality-paper-published-by-ifr",
+        "source": "IFR"
+      },
+      {
+        "date": "2026-01-08",
+        "title": "실사용 검증 기준 제시",
+        "text": "IFR가 신뢰성·효율·안전을 2026년 휴머노이드의 핵심 검증 과제로 제시했다.",
+        "kind": "검증",
+        "url": "https://ifr.org/ifr-press-releases/news/top-5-global-robotics-trends-2026",
+        "source": "IFR"
+      },
+      {
+        "date": "2026-03",
+        "title": "전용 통계 수집",
+        "text": "IFR가 휴머노이드 판매·RaaS 규모에 대한 별도 데이터 수집을 시작했다.",
+        "kind": "데이터 구축",
+        "url": "https://ifr.org/survey-participation-hr/",
+        "source": "IFR"
+      }
+    ],
+    "sources": [
+      {
+        "type": "산업 협회",
+        "publisher": "International Federation of Robotics",
+        "title": "Humanoid Robots: Vision and Reality",
+        "date": "2025-08-14",
+        "url": "https://ifr.org/ifr-press-releases/humanoid-robots-vision-and-reality-paper-published-by-ifr"
+      },
+      {
+        "type": "산업 협회",
+        "publisher": "International Federation of Robotics",
+        "title": "Top 5 Global Robotics Trends 2026",
+        "date": "2026-01-08",
+        "url": "https://ifr.org/ifr-press-releases/news/top-5-global-robotics-trends-2026"
+      },
+      {
+        "type": "통계 수집",
+        "publisher": "International Federation of Robotics",
+        "title": "Participation — Humanoid Robot Statistics",
+        "date": "2026",
+        "url": "https://ifr.org/survey-participation-hr/"
+      }
+    ]
+  },
+  {
+    "id": "cultivated-meat",
+    "name": "배양육",
+    "nameEn": "Cultivated animal-cell food",
+    "category": "식품·바이오제조",
+    "status": "제한 상용",
+    "statusKey": "limited",
+    "trajectory": "mixed",
+    "trajectoryLabel": "규제·제조 검증",
+    "verifiedAt": "2026-08-19",
+    "summary": "동물에서 채취한 세포를 배양해 식품 원료를 만드는 기술이다. 미국에서는 여러 제품이 FDA의 사전 협의 절차를 완료했고, 육류·가금류 제품은 USDA-FSIS의 시설 검사·표시·검사 마크 절차도 거쳐야 한다. 협의 완료를 광범위한 시장 보급이나 일반적 ‘승인’으로 과장하지 않는다.",
+    "currentState": "미국 규제 경로를 통과한 일부 제품이 있으나 생산·유통은 제한적",
+    "access": "제품·지역·생산량에 따라 제한적",
+    "latest": {
+      "date": "2026-02-19",
+      "title": "FDA 완료 협의 인벤토리 갱신",
+      "text": "FDA가 배양 동물세포 식품의 완료된 사전 협의 자료를 제품별로 공개하고 있다.",
+      "source": "U.S. FDA",
+      "url": "https://www.fda.gov/food/human-food-made-cultured-animal-cells/inventory-completed-pre-market-consultations-human-food-made-cultured-animal-cells"
+    },
+    "next": {
+      "date": "제품별 상이",
+      "text": "반복 상업 생산, 시설 검사·표시 승인, 실제 생산능력·가격·유통 범위"
+    },
+    "constraints": [
+      "대형 배양기에서의 세포 성장·수율·오염 통제",
+      "배지·에너지·설비를 포함한 생산원가",
+      "제품별 FDA·USDA 절차와 소비자 표시·수용"
+    ],
+    "unknowns": [
+      "지속 가능한 대량 생산능력",
+      "일반 육류 대비 가격과 에너지·환경 성과",
+      "지속적으로 판매되는 지역과 물량"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "식용 세포 소재의 제품별 안전성 자료 검토 사례",
+        "note": "FDA 협의 문서"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "제한 상용",
+        "value": "일부 제품의 제한적 생산·판매 경로",
+        "note": "광범위 보급 아님"
+      },
+      {
+        "label": "규제",
+        "state": "confirmed",
+        "stateLabel": "경로 확인",
+        "value": "FDA 협의 + USDA 검사·표시 체계",
+        "note": "제품별 절차"
+      },
+      {
+        "label": "생산·운영",
+        "state": "blocked",
+        "stateLabel": "병목",
+        "value": "대량 생산 수율·원가·오염 통제 검증 필요",
+        "note": "공개 비교자료 제한"
+      },
+      {
+        "label": "접근성",
+        "state": "progress",
+        "stateLabel": "제한 접근",
+        "value": "제품·지역·생산량 제한",
+        "note": "일반 시장 보급 미확인"
+      }
+    ],
+    "facts": [
+      {
+        "value": "2026.02.19",
+        "label": "FDA 완료 협의 인벤토리 갱신일",
+        "note": "공식 데이터베이스"
+      },
+      {
+        "value": "2기관",
+        "label": "미국 식품 규제 역할",
+        "note": "FDA와 USDA-FSIS"
+      },
+      {
+        "value": "필수",
+        "label": "USDA 검사 마크·시설 절차",
+        "note": "육류·가금류 제품 시장 진입 시"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022-11-16",
+        "title": "첫 FDA 사전 협의 완료",
+        "text": "FDA가 배양 동물세포 식품에 대한 첫 사전 협의를 완료했다.",
+        "kind": "진전",
+        "url": "https://www.fda.gov/food/hfp-constituent-updates/fda-completes-first-pre-market-consultation-human-food-made-using-animal-cell-culture-technology",
+        "source": "U.S. FDA"
+      },
+      {
+        "date": "2023-03-21",
+        "title": "두 번째 협의 완료",
+        "text": "FDA가 GOOD Meat의 배양 닭고기 소재에 대해 두 번째 협의를 완료했다.",
+        "kind": "진전",
+        "url": "https://www.fda.gov/food/hfp-constituent-updates/fda-completes-second-pre-market-consultation-human-food-made-using-animal-cell-culture-technology",
+        "source": "U.S. FDA"
+      },
+      {
+        "date": "2025-03-07",
+        "title": "배양 돼지 지방 협의 완료",
+        "text": "FDA가 배양 돼지 지방세포 식품의 사전 협의 완료를 발표했다.",
+        "kind": "확장",
+        "url": "https://www.fda.gov/food/hfp-constituent-updates/fda-completes-pre-market-consultation-human-food-made-cultured-pork-fat-cells",
+        "source": "U.S. FDA"
+      },
+      {
+        "date": "2026-02-19",
+        "title": "인벤토리 갱신",
+        "text": "완료된 협의의 제출자료·FDA 회신·과학 메모가 공개 인벤토리에 갱신됐다.",
+        "kind": "검증",
+        "url": "https://www.fda.gov/food/human-food-made-cultured-animal-cells/inventory-completed-pre-market-consultations-human-food-made-cultured-animal-cells",
+        "source": "U.S. FDA"
+      }
+    ],
+    "sources": [
+      {
+        "type": "규제 인벤토리",
+        "publisher": "U.S. FDA",
+        "title": "Inventory of Completed Pre-market Consultations",
+        "date": "2026-02-19",
+        "url": "https://www.fda.gov/food/human-food-made-cultured-animal-cells/inventory-completed-pre-market-consultations-human-food-made-cultured-animal-cells"
+      },
+      {
+        "type": "규제 설명",
+        "publisher": "U.S. FDA",
+        "title": "Human Food Made with Cultured Animal Cells",
+        "date": "2025-03-07",
+        "url": "https://www.fda.gov/food/food-ingredients-packaging/human-food-made-cultured-animal-cells"
+      },
+      {
+        "type": "규제 설명",
+        "publisher": "USDA FSIS",
+        "title": "Human Food Made with Cultured Animal Cells",
+        "date": "현재",
+        "url": "https://www.fsis.usda.gov/inspection/compliance-guidance/labeling/labeling-policies/human-food-made-cultured-animal-cells"
+      },
+      {
+        "type": "기관 협약",
+        "publisher": "U.S. FDA / USDA",
+        "title": "Formal Agreement on Oversight",
+        "date": "현재",
+        "url": "https://www.fda.gov/food/human-food-made-cultured-animal-cells/formal-agreement-between-fda-and-usda-regarding-oversight-human-food-produced-using-animal-cell"
+      }
+    ]
+  },
+  {
+    "id": "sodium-ion-battery",
+    "name": "나트륨이온 배터리",
+    "nameEn": "Sodium-ion batteries",
+    "category": "에너지·저장",
+    "status": "제조 공정 검증",
+    "statusKey": "pilot",
+    "trajectory": "advance",
+    "trajectoryLabel": "제조 확장",
+    "verifiedAt": "2026-08-19",
+    "summary": "리튬 대신 나트륨을 주된 전하 운반 이온으로 사용하는 충전식 배터리 계열이다. 미국 DOE는 저비용·대규모 제조공정 개발을 별도 지원하고 있지만, 지원 선정과 개별 기업의 확장 계획을 이미 검증된 상업 생산량으로 간주할 수는 없다.",
+    "currentState": "소재·공정별 파일럿과 제조 확장 검증이 진행 중이며 제품 간 성숙도 차이가 큼",
+    "access": "일부 특화 제품과 프로젝트가 존재하지만 보편적 리튬이온 대체재는 아님",
+    "latest": {
+      "date": "2026-07-02",
+      "title": "DOE가 미국 나트륨이온 공급망 확장 사례를 소개",
+      "text": "Mana Battery의 보조금 조달과 향후 12~18개월 확장·수요 검증 계획이 공개됐다. 이는 기업 계획이며 독립적인 상업 생산 실적은 아니다.",
+      "source": "U.S. DOE",
+      "url": "https://www.energy.gov/cmei/articles/celebrating-spirit-american-innovation"
+    },
+    "next": {
+      "date": "프로젝트별 상이",
+      "text": "상업 라인의 실제 연간 생산량·수율·사이클 수명·고객 납품·제품 단위 원가 공개"
+    },
+    "constraints": [
+      "용도별 에너지밀도와 수명",
+      "양산 수율·셀 일관성·공정 원가",
+      "화학계별 저온·고온 성능과 안전성",
+      "공급망과 지속적인 고객 수요"
+    ],
+    "unknowns": [
+      "공개 검증된 상업 생산능력",
+      "제품별 총소유비용과 장기 열화",
+      "리튬이온 대비 가장 경쟁력 있는 실제 사용처"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "여러 나트륨이온 화학계의 충방전 원리와 셀 시제품",
+        "note": "제품별 성능 차이 큼"
+      },
+      {
+        "label": "실사용",
+        "state": "progress",
+        "stateLabel": "제한 사용",
+        "value": "일부 고정형 저장·특화 제품과 시제품",
+        "note": "일괄 상용화 판정 불가"
+      },
+      {
+        "label": "규제·표준",
+        "state": "progress",
+        "stateLabel": "진행",
+        "value": "기존 배터리 안전·운송 체계 아래 제품별 검증",
+        "note": "화학계별 시험 필요"
+      },
+      {
+        "label": "생산·운영",
+        "state": "progress",
+        "stateLabel": "파일럿",
+        "value": "DOE가 저비용 대규모 제조공정 3개 과제를 지원",
+        "note": "선정은 생산 실적 아님"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "표준화된 글로벌 출하·가격 데이터 부족",
+        "note": "제품별 확인 필요"
+      }
+    ],
+    "facts": [
+      {
+        "value": "3",
+        "label": "DOE의 나트륨이온 제조 세부과제",
+        "note": "2024 AMMTO 선정"
+      },
+      {
+        "value": "$25.54M",
+        "label": "11개 차세대 배터리 제조 과제 전체 지원 규모",
+        "note": "모두 나트륨이온 과제는 아님"
+      },
+      {
+        "value": "12–18개월",
+        "label": "Mana Battery가 제시한 확장·수요 검증 기간",
+        "note": "기업 계획, 2026년 7월 공개"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-12-19",
+        "title": "제조공정 지원 선정",
+        "text": "DOE가 11개 차세대 배터리 제조 과제 중 나트륨이온 저비용·대규모 제조공정 3개를 선정했다.",
+        "kind": "진전",
+        "url": "https://www.energy.gov/cmei/ammto/funding-selections-platform-technologies-transformative-battery-manufacturing",
+        "source": "U.S. DOE"
+      },
+      {
+        "date": "2026-07-02",
+        "title": "공급망 확장 계획 공개",
+        "text": "DOE가 Mana Battery의 보조금 조달과 12~18개월 확장·수요 검증 목표를 소개했다.",
+        "kind": "기업 계획",
+        "url": "https://www.energy.gov/cmei/articles/celebrating-spirit-american-innovation",
+        "source": "U.S. DOE"
+      },
+      {
+        "date": "2026-08-19",
+        "title": "제조 실적과 지원 계획 분리",
+        "text": "지원 선정액과 기업 계획을 독립 검증된 생산량으로 계산하지 않도록 판정을 재검토했다.",
+        "kind": "검증",
+        "url": "https://www.energy.gov/articles/us-department-energy-selects-11-projects-advance-domestic-manufacturing-next-generation",
+        "source": "U.S. DOE"
+      }
+    ],
+    "sources": [
+      {
+        "type": "정부 선정자료",
+        "publisher": "U.S. Department of Energy",
+        "title": "11 Projects for Next-Generation Battery Manufacturing",
+        "date": "2024-12-19",
+        "url": "https://www.energy.gov/articles/us-department-energy-selects-11-projects-advance-domestic-manufacturing-next-generation"
+      },
+      {
+        "type": "정부 프로젝트",
+        "publisher": "U.S. Department of Energy",
+        "title": "Platform Technologies for Transformative Battery Manufacturing",
+        "date": "2024-12-19",
+        "url": "https://www.energy.gov/cmei/ammto/funding-selections-platform-technologies-transformative-battery-manufacturing"
+      },
+      {
+        "type": "정부 프로그램 사례",
+        "publisher": "U.S. Department of Energy",
+        "title": "Celebrating the Spirit of American Innovation",
+        "date": "2026-07-02",
+        "url": "https://www.energy.gov/cmei/articles/celebrating-spirit-american-innovation"
+      }
+    ]
+  },
+  {
+    "id": "ai-weather-forecasting",
+    "name": "AI 수치예보 운영 시스템",
+    "nameEn": "Operational machine-learning weather forecasting",
+    "category": "컴퓨팅·기상",
+    "status": "기관 운영",
+    "statusKey": "operational",
+    "trajectory": "advance",
+    "trajectoryLabel": "운영 확대",
+    "verifiedAt": "2026-08-19",
+    "summary": "기계학습 모델로 전지구 대기와 해양 상태를 예측해 물리 기반 수치예보와 함께 운영하는 기술이다. ECMWF의 AIFS는 연구 벤치마크를 넘어 실제 운영 예보 생산에 들어갔으며, 2026년 단일·앙상블 v2와 파랑 예측으로 확장됐다.",
+    "currentState": "국제 기상기관의 실시간 운영 예보 체계에 편입된 상태",
+    "access": "실시간 개방 데이터·기관 배포·일반 예보 서비스에 직간접 반영",
+    "latest": {
+      "date": "2026-05-12",
+      "title": "ECMWF가 AIFS Single v2와 Ensemble v2를 운영 구현",
+      "text": "단일·앙상블 구성에 파랑, 추가 지표면 변수와 성층권 기압면이 추가됐다. 운영화가 모든 극한현상에서의 우월성을 의미하지는 않는다.",
+      "source": "ECMWF",
+      "url": "https://www.ecmwf.int/en/newsletter/187/news/implementation-aifs-v2"
+    },
+    "next": {
+      "date": "지속 평가",
+      "text": "희귀 극한현상·지역예보·분포 변화에서의 운영 신뢰도와 물리 모델 결합 성능"
+    },
+    "constraints": [
+      "희귀 극한현상의 표본 부족과 확률 보정",
+      "관측체계·재분석자료 변화에 따른 재학습",
+      "물리적 일관성과 진단 가능성",
+      "지역 고해상도 예보와 운영 장애 대응"
+    ],
+    "unknowns": [
+      "장기간 운영에서의 체계적 편향 변화",
+      "재학습 주기와 전체 컴퓨팅 비용",
+      "기관별 의사결정 과정에서 AI 출력의 실제 기여"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "확인",
+        "value": "기관 검증과 운영 비교를 거친 단일·앙상블 모델",
+        "note": "변수·현상별 성능 차이"
+      },
+      {
+        "label": "실사용",
+        "state": "confirmed",
+        "stateLabel": "운영",
+        "value": "2025년부터 실제 예보 생산, 2026년 v2 운영",
+        "note": "ECMWF"
+      },
+      {
+        "label": "규제·표준",
+        "state": "progress",
+        "stateLabel": "운영 품질관리",
+        "value": "기관 검증·배포·아카이브 절차 적용",
+        "note": "일반 제품 규제와 다름"
+      },
+      {
+        "label": "생산·운영",
+        "state": "confirmed",
+        "stateLabel": "반복 운영",
+        "value": "실시간 단일·앙상블 예보와 공개 데이터 제공",
+        "note": "4회/일 제품 포함"
+      },
+      {
+        "label": "접근성",
+        "state": "confirmed",
+        "stateLabel": "공개",
+        "value": "실시간 AIFS 데이터와 그래픽 제품 접근 가능",
+        "note": "이용 조건 적용"
+      }
+    ],
+    "facts": [
+      {
+        "value": "2025.02.25",
+        "label": "AIFS Single 운영 시작",
+        "note": "ECMWF 공식 데이터 페이지"
+      },
+      {
+        "value": "2025.07.01",
+        "label": "AIFS Ensemble 운영 시작",
+        "note": "ECMWF 공식 데이터 페이지"
+      },
+      {
+        "value": "2026.05.12",
+        "label": "Single·Ensemble v2 공동 운영 구현",
+        "note": "파랑·지표면·성층권 변수 확장"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-02-25",
+        "title": "AIFS Single 운영화",
+        "text": "ECMWF가 결정론적 기계학습 예보를 실제 운영 시스템으로 가동했다.",
+        "kind": "운영",
+        "url": "https://www.ecmwf.int/en/forecasts/dataset/aifs-machine-learning-data",
+        "source": "ECMWF"
+      },
+      {
+        "date": "2025-07-01",
+        "title": "AIFS Ensemble 운영화",
+        "text": "확률 예보를 위한 기계학습 앙상블이 운영 생산에 들어갔다.",
+        "kind": "운영",
+        "url": "https://www.ecmwf.int/en/forecasts/dataset/aifs-machine-learning-data",
+        "source": "ECMWF"
+      },
+      {
+        "date": "2026-05-12",
+        "title": "AIFS v2 구현",
+        "text": "단일·앙상블 모델을 동시에 업그레이드하고 파랑과 추가 지구시스템 변수를 포함했다.",
+        "kind": "진전",
+        "url": "https://www.ecmwf.int/en/newsletter/187/news/implementation-aifs-v2",
+        "source": "ECMWF"
+      }
+    ],
+    "sources": [
+      {
+        "type": "운영기관 보고",
+        "publisher": "ECMWF",
+        "title": "Implementation of AIFS v2",
+        "date": "2026-05",
+        "url": "https://www.ecmwf.int/en/newsletter/187/news/implementation-aifs-v2"
+      },
+      {
+        "type": "운영 데이터",
+        "publisher": "ECMWF",
+        "title": "AIFS Machine Learning Data",
+        "date": "현재",
+        "url": "https://www.ecmwf.int/en/forecasts/dataset/aifs-machine-learning-data"
+      },
+      {
+        "type": "운영 공지",
+        "publisher": "ECMWF",
+        "title": "IFS Cycle 50r1 and AIFS v2 Joint Implementation",
+        "date": "2026-05-06",
+        "url": "https://forum.ecmwf.int/t/confirmation-ifs-cycle-50r1-and-aifs-v2-joint-implementation-on-12-may-2026/14937"
+      }
+    ]
+  },
+  {
+    "id": "commercial-space-stations",
+    "name": "상업용 저궤도 우주정거장",
+    "nameEn": "Commercial low-Earth-orbit space stations",
+    "category": "우주·인프라",
+    "status": "설계·조달",
+    "statusKey": "research",
+    "trajectory": "mixed",
+    "trajectoryLabel": "유인 실증 전",
+    "verifiedAt": "2026-08-19",
+    "summary": "민간이 소유·운영하는 저궤도 정거장에서 NASA와 다른 고객이 서비스를 구매하는 모델이다. NASA는 설계·개발, 유인 실증, 인증, 서비스 구매를 단계적으로 추진하지만 현재 ISS를 대체하는 운영 상업 정거장은 없다.",
+    "currentState": "Phase 1 설계·개발 뒤 Phase 2 유인 실증 조달 구조를 준비하는 단계",
+    "access": "개발 프로그램 단계이며 지속적으로 이용 가능한 상업 정거장 서비스는 아직 없음",
+    "latest": {
+      "date": "2026-02-20",
+      "title": "NASA가 Phase 2 구조를 재확인",
+      "text": "Phase 2에는 critical design review 준비와 4인 승무원의 최소 30일 궤도 실증이 포함될 예정이며, 이후 Phase 3에서 인증과 서비스 구매로 이동한다.",
+      "source": "NASA",
+      "url": "https://www.nasa.gov/humans-in-space/commercial-space/leo-economy/nasa-seeks-industry-input-on-next-phase-of-commercial-space-stations/"
+    },
+    "next": {
+      "date": "Phase 2 선정 이후",
+      "text": "critical design review, 비행 하드웨어 통합, 발사, 4인·30일 유인 실증, NASA 설계 수용·인증"
+    },
+    "constraints": [
+      "생명유지·도킹·화재·대피 안전성",
+      "정거장 모듈과 발사체의 일정·자금 연동",
+      "ISS 종료 전후 저궤도 이용 공백 위험",
+      "정부 외 수요와 장기 운영비·보험"
+    ],
+    "unknowns": [
+      "Phase 2 사업자·일정·예산의 최종 확정",
+      "각 플랫폼의 비행 하드웨어 완성도",
+      "지속 가능한 민간 고객 수요와 서비스 가격"
+    ],
+    "dimensions": [
+      {
+        "label": "과학적 검증",
+        "state": "confirmed",
+        "stateLabel": "기반 확인",
+        "value": "ISS와 유인우주비행으로 핵심 기반기술 축적",
+        "note": "새 상업 플랫폼 검증은 별도"
+      },
+      {
+        "label": "실사용",
+        "state": "unknown",
+        "stateLabel": "미도달",
+        "value": "ISS 대체 상업 정거장의 궤도 운영 없음",
+        "note": "개발 단계"
+      },
+      {
+        "label": "규제·표준",
+        "state": "progress",
+        "stateLabel": "경로 설계",
+        "value": "NASA의 유인 실증·설계 수용·인증 단계",
+        "note": "Phase 2·3"
+      },
+      {
+        "label": "생산·운영",
+        "state": "progress",
+        "stateLabel": "설계·개발",
+        "value": "플랫폼별 설계심사·모형·조달 마일스톤",
+        "note": "비행 통합 전"
+      },
+      {
+        "label": "접근성",
+        "state": "unknown",
+        "stateLabel": "미확인",
+        "value": "지속 운영 상업 서비스 미제공",
+        "note": "ISS 이용과 구분"
+      }
+    ],
+    "facts": [
+      {
+        "value": "4명",
+        "label": "NASA Phase 2 유인 실증 승무원 기준안",
+        "note": "최소 30일"
+      },
+      {
+        "value": "30일",
+        "label": "궤도 유인 실증 최소 기간안",
+        "note": "NASA Phase 2"
+      },
+      {
+        "value": "3단계",
+        "label": "개발·유인실증·서비스 구매 경로",
+        "note": "Phase 1–3"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2021-12-02",
+        "title": "Phase 1 설계 협약",
+        "text": "NASA가 세 미국 기업과 상업 저궤도 목적지 설계·개발 협약을 체결했다.",
+        "kind": "진전",
+        "url": "https://www.nasa.gov/news-release/nasa-selects-companies-to-develop-commercial-destinations-in-space/",
+        "source": "NASA"
+      },
+      {
+        "date": "2025-09-05",
+        "title": "Phase 2 업계 의견 요청",
+        "text": "NASA가 critical design review와 최소 30일 유인 실증을 포함하는 다음 단계 구조를 공개했다.",
+        "kind": "조달",
+        "url": "https://www.nasa.gov/humans-in-space/commercial-space/leo-economy/nasa-seeks-industry-input-on-next-phase-of-commercial-space-stations/",
+        "source": "NASA"
+      },
+      {
+        "date": "2026-02-20",
+        "title": "Phase 2 페이지 갱신",
+        "text": "유인 실증 뒤 Phase 3에서 설계 수용·인증·서비스 구매로 이동하는 단계적 경로를 재확인했다.",
+        "kind": "검증",
+        "url": "https://www.nasa.gov/humans-in-space/commercial-space/leo-economy/nasa-seeks-industry-input-on-next-phase-of-commercial-space-stations/",
+        "source": "NASA"
+      }
+    ],
+    "sources": [
+      {
+        "type": "정부 프로그램",
+        "publisher": "NASA",
+        "title": "NASA Selects Companies to Develop Commercial Destinations in Space",
+        "date": "2021-12-02",
+        "url": "https://www.nasa.gov/news-release/nasa-selects-companies-to-develop-commercial-destinations-in-space/"
+      },
+      {
+        "type": "정부 조달전략",
+        "publisher": "NASA",
+        "title": "NASA Seeks Industry Input on Next Phase of Commercial Space Stations",
+        "date": "갱신 2026-02-20",
+        "url": "https://www.nasa.gov/humans-in-space/commercial-space/leo-economy/nasa-seeks-industry-input-on-next-phase-of-commercial-space-stations/"
+      },
+      {
+        "type": "정부 프로그램",
+        "publisher": "NASA",
+        "title": "Commercial Space Stations in Low Earth Orbit",
+        "date": "현재",
+        "url": "https://www.nasa.gov/humans-in-space/commercial-space/low-earth-orbit-economy/commercial-destinations-in-low-earth-orbit/"
+      }
+    ]
+  }
+];
+
+window.TECHNOLOGIES.push(
+  {
+    "id": "agentic-coding-systems",
+    "name": "에이전트형 소프트웨어 개발",
+    "nameEn": "Agentic software development systems",
+    "category": "AI·소프트웨어",
+    "status": "상용 운영",
+    "statusKey": "operational",
+    "trajectory": "advance",
+    "trajectoryLabel": "상용 운영·인프라 통합 확대",
+    "verifiedAt": "2026-08-21",
+    "summary": "대규모 언어 모델이 코드베이스를 읽고 파일 수정, 테스트, 리뷰, 배포 준비를 연속적으로 수행하는 기술이다. 실행 환경·권한·도구를 결합하여 채팅 보조를 넘는 작업 단위를 만들지만, 결과의 정확성과 보안성은 별도 검증이 필요하다.",
+    "currentState": "상용 제품과 기업 운영 환경에서 사용되며, 보안 경계·작업 검토·평가 체계가 핵심 운영 병목인 단계",
+    "access": "상용 구독·기업 계정·로컬 도구 연결",
+    "latest": {
+      "date": "2026-06-11",
+      "title": "OpenAI가 지속적 에이전트 인프라를 위한 Ona 인수 계획 발표",
+      "text": "OpenAI는 Codex의 장시간 자동 작업을 위한 지속 인프라 확장 계획과 주간 사용자 500만 명 이상이라는 자사 집계를 공개했다. 사용자 수는 독립 검증된 생산성 효과가 아니다.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/openai-to-acquire-ona/"
+    },
+    "next": { "date": "지속 확인", "text": "독립 평가에서의 완료율·결함률, 기업 보안 사고, 인간 검토 비용과 장시간 작업 성공률" },
+    "constraints": [
+      "자동 수정의 정확성·재현성과 숨은 회귀 결함",
+      "실행 권한, 비밀값, 공급망, 프롬프트 인젝션 경계",
+      "대규모 코드베이스의 문맥 유지와 장시간 작업 오류 누적",
+      "모델 출력을 검증할 테스트·리뷰·책임 분리"
+    ],
+    "unknowns": [
+      "독립된 실제 조직에서의 순생산성 효과와 결함 전이 비용",
+      "에이전트가 생성한 코드의 장기 유지보수성",
+      "도구·모델·실행 환경 변경에 따른 성능 편차"
+    ],
+    "dimensions": [
+      { "label": "기술 검증", "state": "progress", "stateLabel": "평가 중", "value": "코드 생성을 넘어 도구 사용·테스트·리뷰 작업 수행", "note": "작업·저장소별 편차" },
+      { "label": "실사용", "state": "confirmed", "stateLabel": "상용", "value": "개인·팀·기업용 서비스 운영", "note": "제공사 공개 기준" },
+      { "label": "보안·통제", "state": "progress", "stateLabel": "개선 중", "value": "샌드박스·권한·감사 로그·조직 정책 결합", "note": "오용·하이잭 위험 지속" },
+      { "label": "운영", "state": "confirmed", "stateLabel": "반복 운영", "value": "클라우드·로컬·CI 환경에서 작업", "note": "실행 환경별 제약" },
+      { "label": "영향", "state": "unknown", "stateLabel": "미확인", "value": "장기 순효과·품질 효과", "note": "독립 원자료 부족" }
+    ],
+    "facts": [
+      { "value": "2025.10.06", "label": "Codex 일반 제공 발표", "note": "OpenAI 제품 발표" },
+      { "value": "2026.02.02", "label": "병렬 에이전트를 위한 Codex 앱 발표", "note": "OpenAI 제품 발표" },
+      { "value": "5M+", "label": "OpenAI가 밝힌 주간 사용자", "note": "2026-06-11 제공사 자사 집계·독립 검증 아님" }
+    ],
+    "timeline": [
+      { "date": "2025-10-06", "title": "Codex 일반 제공 발표", "text": "OpenAI가 Codex의 일반 제공과 SDK·Slack·관리 기능을 발표했다.", "kind": "상용화", "url": "https://openai.com/index/codex-now-generally-available/", "source": "OpenAI" },
+      { "date": "2026-02-02", "title": "Codex 앱 공개", "text": "여러 에이전트를 병렬로 운영하고 작업을 길게 유지하는 전용 인터페이스가 공개됐다.", "kind": "운영 확대", "url": "https://openai.com/index/introducing-the-codex-app/", "source": "OpenAI" },
+      { "date": "2026-06-11", "title": "지속 인프라 확장 계획", "text": "장시간 에이전트 작업을 위한 Ona 인수 계획이 발표됐다.", "kind": "인프라", "url": "https://openai.com/index/openai-to-acquire-ona/", "source": "OpenAI" }
+    ],
+    "sources": [
+      { "type": "제품 발표", "publisher": "OpenAI", "title": "Codex is now generally available", "date": "2025-10-06", "url": "https://openai.com/index/codex-now-generally-available/" },
+      { "type": "제품 발표", "publisher": "OpenAI", "title": "Introducing the Codex app", "date": "2026-02-02", "url": "https://openai.com/index/introducing-the-codex-app/" },
+      { "type": "기업 발표", "publisher": "OpenAI", "title": "OpenAI to acquire Ona", "date": "2026-06-11", "url": "https://openai.com/index/openai-to-acquire-ona/" }
+    ]
+  },
+  {
+    "id": "ai-scientific-discovery",
+    "name": "AI 과학 발견 에이전트",
+    "nameEn": "AI agents for scientific discovery",
+    "category": "AI·과학",
+    "status": "연구 도구·제한 실사용",
+    "statusKey": "pilot",
+    "trajectory": "advance",
+    "trajectoryLabel": "동료평가 공개·실험 프로토콜 연계",
+    "verifiedAt": "2026-08-21",
+    "summary": "여러 AI 에이전트가 문헌 탐색, 가설 생성, 반론, 실험 설계 후보 정리를 반복하여 과학자의 탐색 공간을 줄이는 기술이다. 가설을 제안하는 능력과 실험적 진실을 입증하는 것은 다른 단계이며, 실험·동료평가를 대체하지 않는다.",
+    "currentState": "자연과학·알고리즘 문제에서 가설 생성과 후보 탐색 성과가 보고됐지만, 분야 전반의 재현 가능한 자율 발견으로 확장하기에는 근거가 부족한 단계",
+    "access": "연구 코드·논문·제한적 연구자 사용",
+    "latest": { "date": "2026-05-19", "title": "AI co-scientist 연구가 Nature에 게재", "text": "Google DeepMind는 다중 에이전트 가설 생성·평가 체계와 외부 실험 협업 사례를 공개했다. 개별 사례는 범용성을 입증하지 않는다.", "source": "Google DeepMind / Nature", "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/" },
+    "next": { "date": "지속 확인", "text": "독립 연구실의 재현 실험, 맹검 비교, 부정 가설 탐지율과 실험 비용 절감" },
+    "constraints": ["그럴듯한 오답과 존재하지 않는 문헌·인과 연결", "실험 도구·샘플·시간과 AI 탐색 속도 간의 불균형", "학습 데이터 편향과 매트릭 게임", "전문가 판단·동료평가·실험 재현 필수"],
+    "unknowns": ["개별 사례가 다른 분야와 연구실로 재현되는지", "전문가 없이 발견 후보를 안전하게 선별할 수 있는지", "연구 성공률·시간·비용에 대한 독립 비교 수치"],
+    "dimensions": [
+      { "label": "동료평가", "state": "confirmed", "stateLabel": "게재", "value": "AI co-scientist 체계와 사례가 Nature에 게재", "note": "2026-05-19" },
+      { "label": "실험 연계", "state": "progress", "stateLabel": "제한 사례", "value": "외부 연구자와 일부 가설을 실험으로 확인", "note": "범용성 미확인" },
+      { "label": "실사용", "state": "progress", "stateLabel": "연구 도구", "value": "제한된 연구자 협업과 시험 사용", "note": "일반 자율 발견 아님" },
+      { "label": "재현성", "state": "unknown", "stateLabel": "미확인", "value": "다기관·다분야 독립 재현", "note": "공개 원자료 부족" },
+      { "label": "안전성", "state": "progress", "stateLabel": "사람 감독", "value": "전문가·실험·동료평가를 판정 경계로 유지", "note": "자율 실험 승인 아님" }
+    ],
+    "facts": [
+      { "value": "2026.05.19", "label": "AI co-scientist Nature 게재 공개", "note": "Google DeepMind 발표" },
+      { "value": "MULTI-AGENT", "label": "가설 생성·반론·평가 구조", "note": "실험 입증은 별도" },
+      { "value": "NOT AUTONOMOUS PROOF", "label": "AI 제안과 과학적 입증의 경계", "note": "사이트 판정 원칙" }
+    ],
+    "timeline": [
+      { "date": "2026-05-07", "title": "AlphaEvolve 후속 영향 사례 공개", "text": "Google DeepMind가 알고리즘 탐색·시스템 최적화 적용 사례를 공개했다.", "kind": "적용 사례", "url": "https://deepmind.google/blog/alphaevolve-impact/", "source": "Google DeepMind" },
+      { "date": "2026-05-19", "title": "AI co-scientist Nature 게재", "text": "다중 에이전트 가설 생성과 외부 실험 협업 사례가 동료평가 문헌으로 공개됐다.", "kind": "논문", "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/", "source": "Google DeepMind / Nature" }
+    ],
+    "sources": [
+      { "type": "연구 발표", "publisher": "Google DeepMind", "title": "Co-scientist: a multi-agent AI partner to accelerate research", "date": "2026-05-19", "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/" },
+      { "type": "연구 발표", "publisher": "Google DeepMind", "title": "AlphaEvolve's impact", "date": "2026-05-07", "url": "https://deepmind.google/blog/alphaevolve-impact/" },
+      { "type": "과학 프로그램", "publisher": "Google DeepMind", "title": "AlphaFold", "date": "현재", "url": "https://deepmind.google/science/alphafold/" }
+    ]
+  },
+  {
+    "id": "on-device-agentic-ai",
+    "name": "온디바이스 AI 에이전트",
+    "nameEn": "On-device agentic AI",
+    "category": "AI·엣지",
+    "status": "상용 기기 도입",
+    "statusKey": "operational",
+    "trajectory": "advance",
+    "trajectoryLabel": "모바일·PC·웨어러블로 확대",
+    "verifiedAt": "2026-08-21",
+    "summary": "클라우드 전송을 최소화하고 기기 안의 NPU·CPU·GPU로 맥락 인식, 도구 호출, 여러 단계의 작업 수행을 처리하는 기술이다. 지연·오프라인·개인정보 이점이 있지만, 전력·메모리·모델 품질과 OS 권한 경계가 제한한다.",
+    "currentState": "AI 탈재 스마트폰·PC·XR·웨어러블 하드웨어가 상용 출하되고 있으며, 완전한 다단계 에이전트 실행 범위는 앱·OS·모델별로 편차가 큰 단계",
+    "access": "상용 기기·개발자 SDK·기기별 AI 기능",
+    "latest": { "date": "2026-08-05", "title": "Qualcomm이 Snapdragon X 기반 로컬 에이전트 앱 구조를 공개", "text": "제공사는 PC 안에서 작동하는 에이전트 앱의 지연·개인정보·오프라인 이점을 설명했다. 실제 성능은 앱과 모델별 독립 검증이 필요하다.", "source": "Qualcomm", "url": "https://www.qualcomm.com/news/onq/2026/08/agentic-ai-apps-snapdragon-x-series" },
+    "next": { "date": "지속 확인", "text": "실제 앱의 배터리·지연·메모리 수치, OS 권한 안전성, 로컬과 클라우드 분할 작업의 오류율" },
+    "constraints": ["모델 크기·메모리·배터리·열 제약", "OS·앱 권한을 통한 오작동·개인정보 유출 위험", "다양한 NPU·모델 런타임에 따른 성능 파편화", "로컬 모델 업데이트·보안 패치·평가 체계"],
+    "unknowns": ["일반 사용자 작업에서 완전 로컬로 완료할 수 있는 범위", "에이전트 상시 대기가 배터리 수명에 미치는 장기 영향", "제공사 TOPS 수치와 실제 에이전트 완료율의 관계"],
+    "dimensions": [
+      { "label": "하드웨어", "state": "confirmed", "stateLabel": "상용", "value": "NPU 탑재 PC·스마트폰·XR·웨어러블", "note": "제품별 사양 편차" },
+      { "label": "앱 생태계", "state": "progress", "stateLabel": "확장 중", "value": "로컬 추론·도구 호출 앱 개발", "note": "에이전트 범위는 앱별 차이" },
+      { "label": "오프라인", "state": "confirmed", "stateLabel": "가능", "value": "일부 모델·작업을 통신 없이 실행", "note": "전체 에이전트 작업 아님" },
+      { "label": "보안·권한", "state": "progress", "stateLabel": "검증 중", "value": "로컬 처리와 OS 권한 경계 결합", "note": "오작동·사회공학 위험" },
+      { "label": "실제 효율", "state": "unknown", "stateLabel": "미확인", "value": "에이전트 작업별 전력·지연·완료율", "note": "제공사 사양과 별도" }
+    ],
+    "facts": [
+      { "value": "48 TOPS", "label": "Snapdragon Reality Elite NPU 제공사 사양", "note": "2026-06-16 Qualcomm 발표" },
+      { "value": "UP TO 2B", "label": "Snapdragon Wear Elite의 온디바이스 모델 규모 제공사 설명", "note": "2026-03-02 Qualcomm 발표" },
+      { "value": "COMMERCIAL", "label": "Galaxy 기기에 Snapdragon AI 기능 탑재 발표", "note": "2026-07-22 기업 발표" }
+    ],
+    "timeline": [
+      { "date": "2026-03-02", "title": "Snapdragon Wear Elite 발표", "text": "제공사가 웨어러블에서의 온디바이스 생성형 AI 사양을 공개했다.", "kind": "하드웨어", "url": "https://www.qualcomm.com/news/releases/2026/03/qualcomm-powers-the-rise-of-personal-ai-with-new-snapdragon-wear", "source": "Qualcomm" },
+      { "date": "2026-06-16", "title": "Snapdragon Reality Elite 발표", "text": "XR용 플랫폼에 48 TOPS NPU 사양이 공개됐다.", "kind": "하드웨어", "url": "https://www.qualcomm.com/news/releases/2026/06/qualcomm-takes-spatial-computing-into-the-ai-era-with-snapdragon", "source": "Qualcomm" },
+      { "date": "2026-08-05", "title": "로컬 에이전트 앱 구조 공개", "text": "Snapdragon X 기반 로컬 에이전트 앱의 지연·개인정보·오프라인 이점이 설명됐다.", "kind": "앱 운영", "url": "https://www.qualcomm.com/news/onq/2026/08/agentic-ai-apps-snapdragon-x-series", "source": "Qualcomm" }
+    ],
+    "sources": [
+      { "type": "제품 발표", "publisher": "Qualcomm", "title": "Personal AI with Snapdragon Wear Elite", "date": "2026-03-02", "url": "https://www.qualcomm.com/news/releases/2026/03/qualcomm-powers-the-rise-of-personal-ai-with-new-snapdragon-wear" },
+      { "type": "제품 발표", "publisher": "Qualcomm", "title": "Snapdragon Reality Elite", "date": "2026-06-16", "url": "https://www.qualcomm.com/news/releases/2026/06/qualcomm-takes-spatial-computing-into-the-ai-era-with-snapdragon" },
+      { "type": "기술 설명", "publisher": "Qualcomm", "title": "Agentic AI apps on Snapdragon X Series", "date": "2026-08-05", "url": "https://www.qualcomm.com/news/onq/2026/08/agentic-ai-apps-snapdragon-x-series" }
+    ]
+  },
+  {
+    "id": "vision-language-action-models",
+    "name": "시각·언어·행동 기반 모델",
+    "nameEn": "Vision-language-action foundation models",
+    "category": "AI·로봇",
+    "status": "연구·참조 플랫폼",
+    "statusKey": "pilot",
+    "trajectory": "advance",
+    "trajectoryLabel": "휴머노이드 제어 스택·학습 데이터 확대",
+    "verifiedAt": "2026-08-21",
+    "summary": "카메라·센서 입력과 자연어 지시를 로봇의 연속 행동으로 변환하는 기반 모델이다. 합성 데이터와 실제 로봇 데이터를 결합하지만, 시뮬레이션에서 실물로의 전이와 안전한 일반화가 핵심 병목이다.",
+    "currentState": "개방형 참조 모델·합성 데이터·휴머노이드 참조 플랫폼이 공개되었으나, 비구조화 환경의 범용 안전 작업 성공률은 미확인인 단계",
+    "access": "연구 모델·시뮬레이션·참조 하드웨어",
+    "latest": { "date": "2026-06-02", "title": "NVIDIA가 GR00T 참조 휴머노이드를 학술 연구용으로 발표", "text": "제공사는 자사 VLA 모델·시뮬레이션·하드웨어를 통합한 참조 시스템을 공개했다. 일반 상용 배치 성공을 의미하지 않는다.", "source": "NVIDIA", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-NVIDIA-Isaac-GR00T-Reference-Humanoid-Robot-for-Academic-Research/default.aspx" },
+    "next": { "date": "지속 확인", "text": "독립 로봇·환경의 작업 성공률, 안전 중단률, 시뮬레이션→실물 전이 오류와 장기 운영 편차" },
+    "constraints": ["합성·시뮬레이션 데이터와 실제 환경의 차이", "충분히 다양한 실물 로봇 행동 데이터 부족", "동적 환경에서의 안전 제어·사람 감지·실패 복구", "로봇 하드웨어·센서·제어기 파편화"],
+    "unknowns": ["보지 못한 환경에서의 독립 작업 성공률", "긴 작업 순서에서 오류를 탐지·복구하는 능력", "참조 플랫폼 성과가 다른 하드웨어로 전이되는 범위"],
+    "dimensions": [
+      { "label": "모델", "state": "confirmed", "stateLabel": "공개", "value": "GR00T N1 참조 기반 모델과 개발 스택", "note": "제공사 공개 범위" },
+      { "label": "학습 데이터", "state": "progress", "stateLabel": "합성+실물", "value": "합성 트래젝토리와 실제 로봇 자료 결합", "note": "분포 편향 검증 필요" },
+      { "label": "하드웨어", "state": "progress", "stateLabel": "참조 플랫폼", "value": "학술 연구용 참조 휴머노이드", "note": "상용 실용화와 구분" },
+      { "label": "안전성", "state": "unknown", "stateLabel": "미확인", "value": "비구조화 환경의 범용 안전성", "note": "독립 장기 수치 부족" },
+      { "label": "실사용", "state": "progress", "stateLabel": "파일럿", "value": "제한 연구·실증 환경", "note": "일반 운영 미확인" }
+    ],
+    "facts": [
+      { "value": "780K", "label": "GR00T N1 발표에 기재된 합성 트래젝토리", "note": "2025-03 NVIDIA 제공사 수치" },
+      { "value": "6,500H", "label": "발표에 기재된 인간 시연 데이터", "note": "NVIDIA 제공사 수치" },
+      { "value": "RESEARCH", "label": "2026년 참조 휴머노이드 공개 범위", "note": "학술 연구용" }
+    ],
+    "timeline": [
+      { "date": "2025-03-18", "title": "GR00T N1 발표", "text": "NVIDIA가 휴머노이드용 개방형 기반 모델과 시뮬레이션 데이터 구조를 발표했다.", "kind": "모델", "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Isaac-GR00T-N1--the-Worlds-First-Open-Humanoid-Robot-Foundation-Model--and-Simulation-Frameworks-to-Speed-Robot-Development/default.aspx", "source": "NVIDIA" },
+      { "date": "2026-06-02", "title": "GR00T 참조 휴머노이드 발표", "text": "모델·하드웨어·시뮬레이션을 결합한 학술 연구용 참조 시스템이 공개됐다.", "kind": "참조 플랫폼", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-NVIDIA-Isaac-GR00T-Reference-Humanoid-Robot-for-Academic-Research/default.aspx", "source": "NVIDIA" }
+    ],
+    "sources": [
+      { "type": "기업 발표", "publisher": "NVIDIA", "title": "Isaac GR00T N1 and simulation frameworks", "date": "2025-03-18", "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Isaac-GR00T-N1--the-Worlds-First-Open-Humanoid-Robot-Foundation-Model--and-Simulation-Frameworks-to-Speed-Robot-Development/default.aspx" },
+      { "type": "기업 발표", "publisher": "NVIDIA", "title": "Isaac GR00T Reference Humanoid Robot for Academic Research", "date": "2026-06-02", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-NVIDIA-Isaac-GR00T-Reference-Humanoid-Robot-for-Academic-Research/default.aspx" }
+    ]
+  },
+  {
+    "id": "high-na-euv",
+    "name": "고개구수 High-NA EUV 노광",
+    "nameEn": "High-numerical-aperture EUV lithography",
+    "category": "반도체·제조",
+    "status": "제한 양산 적용",
+    "statusKey": "field",
+    "trajectory": "advance",
+    "trajectoryLabel": "연구 라인에서 일부 고용량 제품 레이어로 이행",
+    "verifiedAt": "2026-08-21",
+    "summary": "0.55 수치개구를 사용해 EUV 노광의 해상력을 높이고 미세 패턴의 다중 노광 수를 줄이려는 반도체 제조 기술이다. 장비 성능뿐 아니라 마스크, 레지스트, 계측, 수율, 공정 경제성이 함께 성숙해야 한다.",
+    "currentState": "Intel 18A 기반 출하 제품의 일부 레이어에 High-NA EUV가 사용됐다는 ASML·Intel 발표가 있으며, 전 업계·전 레이어 대규모 적용으로 확대해 판정할 수는 없는 단계",
+    "access": "선도 파운드리·반도체 업체·공동 연구 라인",
+    "latest": { "date": "2026-07-15", "title": "ASML이 High-NA EUV의 제한 생산 준비 단계를 발표", "text": "ASML은 Intel이 Intel 18A Core Ultra Series 3의 일부 레이어에 High-NA EUV를 사용했고 수율이 NXE 공정과 맞았다고 밝혔다. 공급사·고객 발표로서 전체 양산 통계와는 구분한다.", "source": "ASML", "url": "https://www.asml.com/en/news/press-releases/2026/high-na-euv-reaches-new-readiness-milestone" },
+    "next": { "date": "2026년 하반기→", "text": "추가 고객·레이어 적용, 웨이퍼 처리량, 오버레이·결함률, 마스크·레지스트 생태계의 양산 수치" },
+    "constraints": ["고가 장비와 팩 포트릴리오 투자 비용", "오버레이·초점·결함 제어와 웨이퍼 처리량", "아나모픽 마스크, 레지스트, 계측·검사 도구 성숙도", "다중 노광 축소 이득과 전체 공정 비용의 실제 균형"],
+    "unknowns": ["여러 고객의 양산 라인에서의 반복 수율·처리량", "세대별 공정에서 High-NA가 경제적인 레이어 범위", "소재·마스크·계측 공급망의 확장 속도"],
+    "dimensions": [
+      { "label": "장비", "state": "confirmed", "stateLabel": "고객 반출", "value": "High-NA EUV 시스템이 고객·공동 랩에 설치", "note": "ASML 발표" },
+      { "label": "양산 적용", "state": "confirmed", "stateLabel": "제한 적용", "value": "Intel 18A 출하 제품의 일부 레이어", "note": "2026-07 ASML·Intel 발표" },
+      { "label": "수율", "state": "progress", "stateLabel": "고객 보고", "value": "NXE 공정과 맞춤 수율을 달성했다는 발표", "note": "세부 원자료 미공개" },
+      { "label": "처리량", "state": "unknown", "stateLabel": "미확인", "value": "대규모 양산 웨이퍼 처리량", "note": "고객별 수치 부족" },
+      { "label": "생태계", "state": "progress", "stateLabel": "공동 개발", "value": "ASML·imec High-NA 랩에서 소재·공정 개발", "note": "양산 범위는 회사별 차이" }
+    ],
+    "facts": [
+      { "value": "0.55 NA", "label": "High-NA EUV 수치개구", "note": "ASML 기술 발표" },
+      { "value": "INTEL 18A", "label": "일부 제품 레이어 적용 발표", "note": "2026-07-15 ASML·Intel" },
+      { "value": "LIMITED PRODUCTION", "label": "현재 사이트 판정", "note": "전면 양산으로 해석 금지" }
+    ],
+    "timeline": [
+      { "date": "2024-06-03", "title": "ASML·imec High-NA 랩 개소", "text": "고객과 공급망이 공정·소재·장비를 공동 개발하는 랩이 개소됐다.", "kind": "인프라", "url": "https://www.asml.com/en/news/press-releases/2024/asml-imec-opening-high-na-euv-lithography-lab", "source": "ASML / imec" },
+      { "date": "2026-07-15", "title": "제한 생산 준비 마일스톤 발표", "text": "Intel 18A 제품의 일부 레이어 High-NA 적용과 맞춤 수율 발표가 공개됐다.", "kind": "양산 적용", "url": "https://www.asml.com/en/news/press-releases/2026/high-na-euv-reaches-new-readiness-milestone", "source": "ASML" }
+    ],
+    "sources": [
+      { "type": "공급사·고객 발표", "publisher": "ASML", "title": "High NA EUV reaches new readiness milestone", "date": "2026-07-15", "url": "https://www.asml.com/en/news/press-releases/2026/high-na-euv-reaches-new-readiness-milestone" },
+      { "type": "연구 인프라 발표", "publisher": "ASML / imec", "title": "Opening of High NA EUV Lithography Lab", "date": "2024-06-03", "url": "https://www.asml.com/en/news/press-releases/2024/asml-imec-opening-high-na-euv-lithography-lab" },
+      { "type": "기업 실적", "publisher": "ASML", "title": "Q2 2026 financial results", "date": "2026-07-15", "url": "https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results" }
+    ]
+  },
+  {
+    "id": "co-packaged-optics",
+    "name": "공동 패키징 광학 CPO",
+    "nameEn": "Co-packaged optics for AI networking",
+    "category": "반도체·광통신",
+    "status": "초기 양산",
+    "statusKey": "field",
+    "trajectory": "advance",
+    "trajectoryLabel": "AI 네트워크 스위치에 생산 적용",
+    "verifiedAt": "2026-08-21",
+    "summary": "스위치 ASIC 가까이에 광 입출력 엔진을 패키징해 기판 위 전기 신호 거리와 전력을 줄이는 기술이다. AI 클러스터의 대역폭 확장에 유리하지만, 패키징 수율, 열, 레이저 수명, 유지보수와 표준화가 핵심 병목이다.",
+    "currentState": "NVIDIA가 Spectrum-X Ethernet Photonics CPO 스위치의 생산 진입을 발표했고, OCP 안에서 다중 기업 시스템 구조 표준화가 시작된 초기 양산·생태계 형성 단계",
+    "access": "대규모 AI 클러스터·하이퍼스케일 네트워크 도입",
+    "latest": { "date": "2026-08-13", "title": "19개 기업이 OCP 안에 CPO 시스템 구조 협의체를 공식 출범", "text": "협의체는 시스템 인터페이스·유지보수·광원 구조를 다루는 300쪽 규모의 백서를 공개했다. 이는 표준화 진전이지 상호운용성 완료를 의미하지 않는다.", "source": "Lightmatter / OCP", "url": "https://lightmatter.co/press-release/industry-leaders-formally-launch-cpo-system-architecture-initiative-within-the-open-compute-project/" },
+    "next": { "date": "2026년 하반기→", "text": "고객 배치 규모, 필드 고장률·교체 시간, 패키징 수율, 외부 레이저 구조와 OCP 인터페이스 상호운용성" },
+    "constraints": ["포토닉스·ASIC 패키징 수율과 검사 비용", "고열 스위치 패키지의 열 관리와 장기 신뢰성", "레이저·광 엔진 고장 시 현장 교체·유지보수", "공급사 간 인터페이스·광원·관리 표준 상호운용성"],
+    "unknowns": ["대규모 필드 배치에서의 실제 전력 절감·가동률 수치", "플러거블 광학 대비 수명주기 총비용과 수리 복잡도", "OCP 구조가 여러 공급사 제품의 실제 상호운용성으로 이어지는 시점"],
+    "dimensions": [
+      { "label": "생산", "state": "confirmed", "stateLabel": "초기 양산", "value": "Spectrum-X Ethernet Photonics CPO 생산 진입 발표", "note": "NVIDIA 제공사 발표" },
+      { "label": "인터페이스", "state": "progress", "stateLabel": "표준화", "value": "OCP CPO System Architecture Initiative 출범", "note": "19개 기업 참여 발표" },
+      { "label": "성능", "state": "progress", "stateLabel": "공급사 수치", "value": "200 Gb/s SerDes와 전력·가동률 개선 주장", "note": "독립 필드 수치 부족" },
+      { "label": "신뢰성", "state": "unknown", "stateLabel": "미확인", "value": "장기 필드 고장률·수리 시간", "note": "배치 초기" },
+      { "label": "상호운용성", "state": "progress", "stateLabel": "구조 정의", "value": "공통 시스템 구조·인터페이스 백서", "note": "제품 검증은 향후 과제" }
+    ],
+    "facts": [
+      { "value": "IN PRODUCTION", "label": "Spectrum-X Ethernet Photonics CPO 상태 발표", "note": "2026-05-31 NVIDIA" },
+      { "value": "200 GB/S", "label": "SerDes 속도 제공사 사양", "note": "NVIDIA Vera Rubin 발표" },
+      { "value": "19", "label": "OCP CPO 시스템 구조 협의체 참여 기업 수", "note": "2026-08-13 Lightmatter 발표" }
+    ],
+    "timeline": [
+      { "date": "2025-03-18", "title": "Spectrum-X Photonics CPO 스위치 발표", "text": "NVIDIA가 AI 팩토리용 CPO 스위치와 제품 로드맵을 공개했다.", "kind": "제품 발표", "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/default.aspx", "source": "NVIDIA" },
+      { "date": "2026-05-31", "title": "Spectrum-X Ethernet Photonics CPO 생산 진입 발표", "text": "NVIDIA가 Vera Rubin 플랫폼 발표에서 CPO 스위치가 생산에 들어갔다고 밝혔다.", "kind": "양산", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx", "source": "NVIDIA" },
+      { "date": "2026-08-13", "title": "OCP CPO System Architecture Initiative 출범", "text": "19개 기업 협의체와 300쪽 규모의 시스템 구조 백서가 공개됐다.", "kind": "표준화", "url": "https://lightmatter.co/press-release/industry-leaders-formally-launch-cpo-system-architecture-initiative-within-the-open-compute-project/", "source": "Lightmatter / OCP" }
+    ],
+    "sources": [
+      { "type": "기업 발표", "publisher": "NVIDIA", "title": "Spectrum-X Photonics Co-Packaged Optics switches", "date": "2025-03-18", "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/default.aspx" },
+      { "type": "생산 발표", "publisher": "NVIDIA", "title": "Vera Rubin ramps into full production", "date": "2026-05-31", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx" },
+      { "type": "표준화 발표", "publisher": "Lightmatter / Open Compute Project", "title": "CPO System Architecture Initiative", "date": "2026-08-13", "url": "https://lightmatter.co/press-release/industry-leaders-formally-launch-cpo-system-architecture-initiative-within-the-open-compute-project/" }
+    ]
+  }
+);
+
+// AI weather forecasting is treated as an AI scientific system rather than a
+// general computing record so the sector map reflects its model-driven stack.
+window.TECHNOLOGIES = window.TECHNOLOGIES.map(technology => technology.id === "ai-weather-forecasting"
+  ? { ...technology, category: "AI·과학" }
+  : technology);
+
+// This checked-in snapshot is the result of the 2026-08-21 GPT Work research pass.
+// A verification date means the cited primary sources were rechecked that day; it
+// does not mean every technology produced a new event that day.
+window.SNAPSHOT_VERIFIED_AT = "2026-08-21";
+window.TECHNOLOGIES = window.TECHNOLOGIES.map(technology => ({
+  ...technology,
+  verifiedAt: window.SNAPSHOT_VERIFIED_AT
+}));
+
+window.TECHNOLOGY_RELATIONSHIPS = [
+  {
+    "from": "in-vivo-gene-editing",
+    "to": "xenokidney",
+    "type": "직접 기술 의존",
+    "kind": "observed",
+    "strength": 3,
+    "basis": "돼지 장기의 면역·응고 관련 유전자를 편집하는 과정이 이종이식 장기 설계의 핵심 입력이다.",
+    "evidence": "임상 등록과 FDA 유전체 편집·이종이식 지침에 동시에 나타나는 직접 연결"
+  },
+  {
+    "from": "xenokidney",
+    "to": "stem-cell-islets",
+    "type": "대체 장기·세포치료",
+    "kind": "system",
+    "strength": 2,
+    "basis": "두 기술 모두 장기·세포 기능을 대체하며 면역 거부, 장기 안전성, 제조 품질이 도입 병목이다.",
+    "evidence": "서로 다른 적응증이지만 이식·면역억제·장기추적이라는 공통 임상 시스템"
+  },
+  {
+    "from": "in-vivo-gene-editing",
+    "to": "stem-cell-islets",
+    "type": "면역회피 세포 설계",
+    "kind": "inferred",
+    "strength": 1,
+    "basis": "편집 기술은 이식 세포의 면역 인식과 기능을 조절하는 수단이 될 수 있으나, 현재 추적 항목의 임상 성과가 서로를 입증하지는 않는다.",
+    "evidence": "플랫폼 수준의 간접 연결 — 임상적 파급은 별도 검증 필요"
+  },
+  {
+    "from": "personalized-cancer-vaccine",
+    "to": "in-vivo-gene-editing",
+    "type": "정밀 유전체 치료 플랫폼",
+    "kind": "inferred",
+    "strength": 1,
+    "basis": "두 기술 모두 환자·표적 유전체 정보를 치료 설계로 변환하지만 작동 방식과 규제 제품은 다르다.",
+    "evidence": "데이터·제조 플랫폼의 간접 연결 — 효능 전이로 해석 금지"
+  },
+  {
+    "from": "perovskite-tandem",
+    "to": "sodium-ion-battery",
+    "type": "발전·저장 시스템",
+    "kind": "system",
+    "strength": 2,
+    "basis": "태양광 발전량 확대는 저장장치의 비용·수명·공급망과 함께 전력 시스템 가치를 결정한다.",
+    "evidence": "전력 생산과 저장의 시스템 결합 — 제품 성능은 각각 검증"
+  },
+  {
+    "from": "enhanced-geothermal",
+    "to": "direct-air-capture",
+    "type": "무탄소 열·전력 공급",
+    "kind": "system",
+    "strength": 2,
+    "basis": "직접공기포집은 연속적인 열과 전력이 필요하고, 지열은 지역 조건이 맞으면 이를 공급할 수 있다.",
+    "evidence": "에너지 입력 비용과 탄소강도의 시스템 연결"
+  },
+  {
+    "from": "fusion-power",
+    "to": "direct-air-capture",
+    "type": "장기 에너지 공급 가정",
+    "kind": "inferred",
+    "strength": 1,
+    "basis": "핵융합이 상업화될 경우 DAC의 전력·열 공급원이 될 수 있지만 양쪽 모두 현재 대규모 결합 운전 근거는 없다.",
+    "evidence": "장기 가정에 따른 간접 연결 — 현재 운영 사실 아님"
+  },
+  {
+    "from": "fusion-power",
+    "to": "fault-tolerant-quantum",
+    "type": "고난도 시뮬레이션",
+    "kind": "inferred",
+    "strength": 1,
+    "basis": "내결함성 양자계산은 향후 재료·플라즈마 문제에 쓰일 가능성이 있으나 실용 우위와 핵융합 일정 영향은 미확인이다.",
+    "evidence": "연구 가설 수준 — 상용 성과 또는 일정 단축으로 간주하지 않음"
+  },
+  {
+    "from": "implantable-bci",
+    "to": "humanoid-robots",
+    "type": "의도 해석·로봇 제어",
+    "kind": "inferred",
+    "strength": 2,
+    "basis": "BCI의 운동 의도 해석은 로봇 팔·이동 보조 장치 제어와 연결될 수 있다.",
+    "evidence": "보조공학 인터페이스 연결 — 범용 휴머노이드 운용성과는 별도"
+  },
+  {
+    "from": "robotaxi",
+    "to": "humanoid-robots",
+    "type": "자율 인지·안전 검증",
+    "kind": "system",
+    "strength": 2,
+    "basis": "센서 융합, 경로 계획, 엣지 컴퓨팅, 사고 검증은 두 자율 시스템의 공통 기술·운영 층이다.",
+    "evidence": "공통 자율 시스템 스택 — 안전성 성과는 사용 환경별 검증"
+  },
+  {
+    "from": "cultivated-meat",
+    "to": "stem-cell-islets",
+    "type": "세포 배양·품질관리",
+    "kind": "system",
+    "strength": 2,
+    "basis": "둘 다 세포주, 배지, 오염 통제, 대량 배양, 배치 품질관리 역량에 영향을 받는다.",
+    "evidence": "제조 플랫폼 연결 — 식품과 치료제의 규제 기준은 서로 다름"
+  },
+  {
+    "from": "commercial-space-stations",
+    "to": "humanoid-robots",
+    "type": "원격 운영·유지보수",
+    "kind": "inferred",
+    "strength": 1,
+    "basis": "상업 우주정거장의 점검·유지보수 자동화는 원격 로봇 운용 수요를 만들 수 있다.",
+    "evidence": "잠재 운영 연관성 — 실제 상시 배치 성과는 미확인"
+  },
+  {
+    "from": "ai-weather-forecasting",
+    "to": "commercial-space-stations",
+    "type": "발사·회수 운영 기상",
+    "kind": "system",
+    "strength": 1,
+    "basis": "발사와 회수 판단은 기상 예측을 사용하지만 AI 예보가 상업정거장 일정 자체를 보장하지는 않는다.",
+    "evidence": "운영 의사결정의 간접 연결"
+  },
+  {
+    "from": "ai-weather-forecasting",
+    "to": "robotaxi",
+    "type": "운영 위험 예측",
+    "kind": "inferred",
+    "strength": 1,
+    "basis": "강수·결빙·가시성 예측은 자율주행 운행 제한과 배차 판단에 입력될 수 있다.",
+    "evidence": "조건부 운영 연결 — 차량 안전 검증을 대체하지 않음"
+  },
+  {
+    "from": "agentic-coding-systems",
+    "to": "ai-scientific-discovery",
+    "type": "에이전트 오케스트레이션·평가",
+    "kind": "system",
+    "strength": 2,
+    "basis": "여러 에이전트의 작업 분해, 도구 사용, 결과 평가, 사람 검토 구조를 공유하지만 코드 정확성과 과학적 진실의 평가 기준은 다르다.",
+    "evidence": "OpenAI와 Google DeepMind의 공식 시스템 설명에서 관찰되는 공통 에이전트 운영 계층"
+  },
+  {
+    "from": "ai-scientific-discovery",
+    "to": "in-vivo-gene-editing",
+    "type": "가설·표적 탐색",
+    "kind": "inferred",
+    "strength": 1,
+    "basis": "AI 과학 에이전트는 유전자 편집의 표적·기전 가설을 정리할 수 있지만 임상 안전성·효능을 입증하지 않는다.",
+    "evidence": "연구 설계 계층의 조건부 연결 — 실험·임상 검증 대체 금지"
+  },
+  {
+    "from": "on-device-agentic-ai",
+    "to": "implantable-bci",
+    "type": "로컬 지연·개인정보 처리",
+    "kind": "inferred",
+    "strength": 1,
+    "basis": "기기 내 AI는 BCI 신호 해석과 보조기기 제어의 지연·개인정보 요구에 연결될 수 있으나 임상 유용성은 별도 문제다.",
+    "evidence": "컴퓨팅 인프라 계층의 조건부 연결 — BCI 효능 전이로 해석 금지"
+  },
+  {
+    "from": "vision-language-action-models",
+    "to": "humanoid-robots",
+    "type": "인지·행동 제어 스택",
+    "kind": "observed",
+    "strength": 3,
+    "basis": "VLA 기반 모델은 시각·언어 입력을 휴머노이드의 작업 행동으로 변환하는 제어 계층이다.",
+    "evidence": "NVIDIA GR00T N1과 참조 휴머노이드 발표에 명시된 직접 기술 의존"
+  },
+  {
+    "from": "high-na-euv",
+    "to": "co-packaged-optics",
+    "type": "첨단 반도체 제조·AI 인프라",
+    "kind": "system",
+    "strength": 2,
+    "basis": "High-NA EUV는 미세 로직 제조를, CPO는 스위치 ASIC·포토닉스 패키징을 담당하며 AI 인프라 확장의 서로 다른 제조 병목을 구성한다.",
+    "evidence": "반도체 제조·패키징 시스템 연결 — 개별 제품 성능은 각각 검증"
+  },
+  {
+    "from": "ai-weather-forecasting",
+    "to": "ai-scientific-discovery",
+    "type": "과학 기반 모델·검증",
+    "kind": "system",
+    "strength": 2,
+    "basis": "두 기술 모두 대규모 과학 데이터와 전문 평가를 사용하지만, 기상 예보는 지속적인 운영 검증이 가능하고 발견 에이전트는 가설별 실험이 필요하다.",
+    "evidence": "과학 AI의 데이터·평가 시스템 연결 — 운영 성숙도는 구분"
+  }
+];

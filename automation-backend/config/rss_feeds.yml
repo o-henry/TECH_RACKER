@@ -1,0 +1,2 @@
+# Add only reviewed HTTPS feeds. An empty list is valid and produces no synthetic records.
+feeds: []
