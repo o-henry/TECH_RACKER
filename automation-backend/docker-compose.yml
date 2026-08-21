@@ -1,0 +1,97 @@
+x-app-environment: &app-environment
+  ENVIRONMENT: ${ENVIRONMENT:-production}
+  LOG_LEVEL: ${LOG_LEVEL:-INFO}
+  DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-tracker}:${POSTGRES_PASSWORD:-change-this-password}@db:5432/${POSTGRES_DB:-technology_tracker}
+  SEC_USER_AGENT: ${SEC_USER_AGENT:-TechnologyTracker/0.2 contact@example.com}
+  OPENALEX_MAILTO: ${OPENALEX_MAILTO:-contact@example.com}
+  OPENALEX_API_KEY: ${OPENALEX_API_KEY:-}
+  OPENALEX_LOOKBACK_DAYS: ${OPENALEX_LOOKBACK_DAYS:-14}
+  OPENALEX_INITIAL_LOOKBACK_DAYS: ${OPENALEX_INITIAL_LOOKBACK_DAYS:-3650}
+  OPENALEX_MAX_PAGES_PER_QUERY: ${OPENALEX_MAX_PAGES_PER_QUERY:-4}
+  OPENALEX_PAGE_SIZE: ${OPENALEX_PAGE_SIZE:-100}
+  CLINICAL_TRIALS_LOOKBACK_DAYS: ${CLINICAL_TRIALS_LOOKBACK_DAYS:-30}
+  CLINICAL_TRIALS_INITIAL_LOOKBACK_DAYS: ${CLINICAL_TRIALS_INITIAL_LOOKBACK_DAYS:-3650}
+  CLINICAL_TRIALS_MAX_PAGES_PER_QUERY: ${CLINICAL_TRIALS_MAX_PAGES_PER_QUERY:-5}
+  CLINICAL_TRIALS_PAGE_SIZE: ${CLINICAL_TRIALS_PAGE_SIZE:-100}
+  SEC_LOOKBACK_DAYS: ${SEC_LOOKBACK_DAYS:-120}
+  SEC_INITIAL_LOOKBACK_DAYS: ${SEC_INITIAL_LOOKBACK_DAYS:-730}
+  SEC_MAX_FILINGS_PER_COMPANY: ${SEC_MAX_FILINGS_PER_COMPANY:-80}
+  SEC_FETCH_DOCUMENTS: ${SEC_FETCH_DOCUMENTS:-true}
+  SEC_MAX_DOCUMENT_BYTES: ${SEC_MAX_DOCUMENT_BYTES:-10000000}
+  SEC_REQUESTS_PER_SECOND: ${SEC_REQUESTS_PER_SECOND:-2}
+  RSS_MAX_FEED_BYTES: ${RSS_MAX_FEED_BYTES:-2000000}
+  SCHEDULER_TIMEZONE: ${SCHEDULER_TIMEZONE:-Asia/Seoul}
+  RSS_CRON: "${RSS_CRON:-*/10 * * * *}"
+  OPENALEX_CRON: "${OPENALEX_CRON:-17 03 * * *}"
+  CLINICAL_TRIALS_CRON: "${CLINICAL_TRIALS_CRON:-41 */4 * * *}"
+  SEC_CRON: "${SEC_CRON:-7,37 * * * *}"
+  BACKEND_CONTROL_TOKEN: ${BACKEND_CONTROL_TOKEN:?BACKEND_CONTROL_TOKEN is required}
+  MCP_INTERNAL_TOKEN: ${MCP_INTERNAL_TOKEN:?MCP_INTERNAL_TOKEN is required}
+  ANALYSIS_BATCH_SIZE: ${ANALYSIS_BATCH_SIZE:-10}
+  ANALYSIS_DAILY_BATCH_LIMIT: ${ANALYSIS_DAILY_BATCH_LIMIT:-6}
+  ANALYSIS_CRITICAL_BURST_PER_HOUR: ${ANALYSIS_CRITICAL_BURST_PER_HOUR:-2}
+  ANALYSIS_LEASE_MINUTES: ${ANALYSIS_LEASE_MINUTES:-20}
+  HTTP_TIMEOUT_SECONDS: ${HTTP_TIMEOUT_SECONDS:-30}
+  HTTP_MAX_RETRIES: ${HTTP_MAX_RETRIES:-4}
+  TRACKING_CONFIG_PATH: /app/config/tracking.yml
+  SEED_DATA_PATH: /app/seed/technologies.json
+  RSS_FEEDS_PATH: /app/config/rss_feeds.yml
+  FRONTEND_DIR: /app/frontend-disabled
+
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-technology_tracker}
+      POSTGRES_USER: ${POSTGRES_USER:-tracker}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-this-password}
+    volumes:
+      - technology_tracker_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tracker} -d ${POSTGRES_DB:-technology_tracker}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    build: .
+    init: true
+    restart: unless-stopped
+    environment:
+      <<: *app-environment
+      RUN_MIGRATIONS: "true"
+      RUN_SEED: "true"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=4).read()",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  scheduler:
+    build: .
+    init: true
+    restart: unless-stopped
+    environment:
+      <<: *app-environment
+      RUN_MIGRATIONS: "false"
+      RUN_SEED: "false"
+      SCHEDULER_RUN_ON_STARTUP: ${SCHEDULER_RUN_ON_STARTUP:-true}
+    command: ["python", "-m", "app.scheduler"]
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  technology_tracker_db:

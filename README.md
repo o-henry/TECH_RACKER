@@ -11,10 +11,11 @@
 
 - 기술별 현재 상태와 최근 사건을 원출처 링크와 함께 표시합니다.
 - OpenAlex, ClinicalTrials.gov, SEC EDGAR, 정부·규제기관, 기업 IR과 신뢰할 수 있는 보도 자료를 구분합니다.
+- Google Trends의 한국·미국 급상승 검색어는 API 키 없이 공식 RSS로 수집하지만, 기술 진전을 입증하는 출처가 아니라 재조사 순서를 정하는 관심 신호로만 사용합니다.
 - GPT가 기술·운영 의존성을 자동 매핑하고 관계 지도로 보여 줍니다.
 - 병목, 미확인 값과 다음 확인 지점을 사실과 분리해 표시합니다.
-- 각 기술 하단의 심층 분석을 펼치면 D1 대기열에 비동기 요청을 저장하고, 예약 분석이 원출처를 대조한 뒤 작동 구조, 근거 해석, 병목의 인과관계, 기술 의존성과 다음 조사 질문을 반환합니다.
-- AI·소프트웨어와 반도체·첨단소재를 포함한 7개 상위 분야를 추적합니다.
+- 각 기술 하단의 심층 분석을 펼치면 D1 대기열에 비동기 요청을 저장하고, 예약 분석이 원출처를 대조한 뒤 작동 구조, 근거 해석, 병목의 인과관계, 기술 의존성, 다음 조사 질문과 조건 기반 기술 전망을 반환합니다.
+- AI·소프트웨어, 의료·생명과학, 반도체·광통신, 양자·컴퓨팅, 로봇·모빌리티, 에너지·전력, 기후·환경, 첨단소재·제조, 우주·통신, 식품·농업의 10개 상위 분야를 추적합니다.
 - 검색 목록에 없는 기술은 즉시 조사 대기열에 등록할 수 있습니다.
 - 인터페이스는 한국어만 제공합니다.
 
@@ -37,8 +38,9 @@
 1. 기술 상세에서 심층 분석을 처음 펼치면 소유자 전용 D1 대기열에 요청이 생성됩니다.
 2. 화면은 `pending`, `researching`, `completed`, `needs_review`, `failed` 상태만 표시하며 가짜 진행률을 만들지 않습니다.
 3. 예약 분석은 기존 설명을 반복하지 않고 시스템 경계와 인과 사슬, 근거가 의미하는 범위와 한계, 결합된 병목, 다른 기술과의 의존성, 다음 조사 질문을 구조화합니다.
-4. 최소 2개 원출처와 필수 분석 필드를 충족한 결과만 `completed`로 저장됩니다.
-5. 완료 결과는 기술 상세가 열려 있는 동안 30초 간격으로 확인되어 자동 표시됩니다.
+4. 미래 경로는 투자 분석이나 범용 시나리오가 아니라 기술별 작동 기전, 필요한 조건, 관측 가능한 신호, 경로를 무효화하는 신호로 작성합니다.
+5. 최소 2개 원출처와 필수 분석 필드를 충족한 결과만 `completed`로 저장됩니다.
+6. 완료 결과는 기술 상세가 열려 있는 동안 30초 간격으로 확인되어 자동 표시됩니다.
 
 ChatGPT 예약 작업은 구독 플랜 안에서 실행되지만 Pro 모드 모델을 지원하지 않습니다. 따라서 자동 결과의 모델 표시는 실제 실행 모델 또는 `CHATGPT SCHEDULED ANALYSIS`로 저장하며 `GPT PRO`라고 허위 표기하지 않습니다. Pro 모드 심층 분석이 필요한 경우에는 같은 대기 요청을 이 Work 대화에서 수동으로 처리해 결과를 게시해야 합니다.
 
@@ -53,7 +55,7 @@ Owner browser
 
 Optional external ingestion service
   -> FastAPI + PostgreSQL + APScheduler
-  -> OpenAlex / ClinicalTrials.gov / SEC EDGAR / RSS collectors
+  -> OpenAlex / ClinicalTrials.gov / SEC EDGAR / reviewed RSS / Google Trends RSS collectors
   -> Sites backend proxy
 ```
 
@@ -109,6 +111,8 @@ The optional collector has its own instructions in [`automation-backend/README.m
 ## Data policy
 
 Source facts and editorial judgments are separate layers. Event date and publication date must be distinguished where available. A market move, press article or search result alone does not prove a clinical, regulatory, production or operating-state change. This project is not medical or investment advice.
+
+Google Trends entries are stored as `public_interest` signals with a low queue priority and a 24-hour per-technology cooldown. They cannot pass the primary-source auto-publication gate; an official registry, regulator, filing, peer-reviewed paper, government source, or directly relevant company disclosure must independently corroborate any state change.
 
 ## License
 

@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1787286471614,
+      "tag": "0000_cultured_wrecker",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1787286486795,
+      "tag": "0001_marvelous_havok",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1787291494502,
+      "tag": "0002_shallow_crusher_hogan",
+      "breakpoints": true
+    }
+  ]
+}

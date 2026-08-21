@@ -1,0 +1,1 @@
+CREATE INDEX `technology_research_requests_status_updated_idx` ON `technology_research_requests` (`status`,`updated_at`);
