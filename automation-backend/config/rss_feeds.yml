@@ -1,0 +1,50 @@
+# Reviewed HTTPS feeds only. Google Trends is a public-interest signal, not
+# evidence that a technology has advanced, succeeded, or received approval.
+technology_terms: &tracked_technology_terms
+  alzheimer-blood-test: ['알츠하이머 혈액검사', 'Alzheimer blood test', 'p-tau217', 'ptau217']
+  in-vivo-gene-editing: ['체내 유전자 편집', 'in vivo gene editing', 'in vivo CRISPR', 'CRISPR therapy']
+  personalized-cancer-vaccine: ['개인 맞춤형 암 백신', 'personalized cancer vaccine', 'neoantigen vaccine', 'V940', 'mRNA-4157']
+  xenokidney: ['돼지 신장 이식', 'pig kidney transplant', 'xenokidney', 'xenotransplantation']
+  stem-cell-islets: ['줄기세포 췌도세포', 'stem cell islet', 'zimislecel', 'VX-880']
+  perovskite-tandem: ['페로브스카이트 탠덤', 'perovskite tandem solar', 'perovskite silicon tandem']
+  enhanced-geothermal: ['향상형 지열', 'enhanced geothermal', 'EGS geothermal']
+  direct-air-capture: ['직접공기포집', 'direct air capture', 'carbon removal', '1PointFive']
+  fusion-power: ['핵융합 발전', 'fusion power', 'fusion energy', 'tokamak']
+  fault-tolerant-quantum: ['오류보정 양자컴퓨팅', 'fault tolerant quantum', 'logical qubit', 'quantum error correction']
+  robotaxi: ['로보택시', 'robotaxi', 'Waymo', 'Cybercab']
+  implantable-bci: ['침습형 뇌 컴퓨터 인터페이스', 'implantable BCI', 'brain computer interface', 'Neuralink']
+  humanoid-robots: ['휴머노이드 로봇', 'humanoid robot', 'Optimus robot', 'Figure robot']
+  cultivated-meat: ['배양육', 'cultivated meat', 'cultured meat']
+  sodium-ion-battery: ['나트륨이온 배터리', 'sodium ion battery', 'sodium-ion battery']
+  ai-weather-forecasting: ['AI 기상예보', 'AI weather forecasting', 'GraphCast', 'WeatherNext']
+  commercial-space-stations: ['상업 우주정거장', 'commercial space station', 'Orbital Reef', 'Starlab']
+  agentic-coding-systems: ['에이전트 코딩', 'agentic coding', 'coding agent', 'software agent']
+  ai-scientific-discovery: ['AI 과학 발견', 'AI scientific discovery', 'AI scientist']
+  on-device-agentic-ai: ['온디바이스 AI 에이전트', 'on-device agentic AI', 'on-device AI agent']
+  vision-language-action-models: ['시각 언어 행동 모델', 'vision language action', 'VLA model', 'GR00T']
+  high-na-euv: ['High-NA EUV', '고개구수 EUV', 'high numerical aperture EUV']
+  co-packaged-optics: ['공동 패키징 광학', 'co-packaged optics', 'CPO networking']
+  ai-protein-design: ['AI 단백질 설계', 'AI protein design', 'protein binder design', 'AlphaProteo']
+  ai-materials-discovery: ['AI 소재 발견', 'AI materials discovery', 'GNoME', 'autonomous materials lab']
+  car-t-autoimmune: ['자가면역 CAR-T', 'CAR-T autoimmune', 'CAR T autoimmune']
+  grid-forming-inverters: ['계통형성 인버터', 'grid-forming inverter', 'grid forming inverter']
+  hydrogen-direct-reduced-iron: ['수소 직접환원철', 'hydrogen DRI', 'hydrogen direct reduced iron', 'green steel']
+  backside-power-delivery: ['반도체 후면 전력', 'backside power delivery', 'PowerVia']
+  satellite-direct-to-device: ['위성 스마트폰 직접 통신', 'satellite direct to device', 'direct-to-device satellite', 'AST SpaceMobile']
+
+feeds:
+  - id: google-trends-kr
+    publisher: Google Trends
+    url: https://trends.google.com/trending/rss?geo=KR
+    allowed_entry_hosts: ['trends.google.com']
+    signal_class: public_interest
+    technology_terms: *tracked_technology_terms
+    enabled: true
+
+  - id: google-trends-us
+    publisher: Google Trends
+    url: https://trends.google.com/trending/rss?geo=US
+    allowed_entry_hosts: ['trends.google.com']
+    signal_class: public_interest
+    technology_terms: *tracked_technology_terms
+    enabled: true

@@ -1,0 +1,45 @@
+{
+  "executiveJudgment": "유전자 편집 돼지 신장 이식은 개별 환자 대상 예외적 이식에서 FDA가 허용한 전향적 임상시험 단계로 넘어갔다. EXPAND는 10개 유전자 편집 신장을 사용하고 첫 6명을 단계적으로 등록한 뒤 12주 안전성 검토와 24주 기능·생존 평가를 거쳐 확대 여부를 결정한다. 이 전환은 임상 진입을 뜻하지만 장기 효능이나 허가 가능성을 입증하지는 않는다. 사람 사례에서 즉시 신장 기능과 가역적 T세포 매개 거부반응이 관찰됐지만 표본이 작고 사용된 유전자 편집 구성도 시험 제품과 동일하지 않다. 핵심 병목은 면역 거부를 단기 억제하는 것보다 일관된 장기 기능, 감염·인수공통전염 위험의 평생 감시, 제조 개체 간 품질 일관성을 동시에 입증하는 일이다.",
+  "technicalModel": {
+    "systemBoundary": "병원체가 통제된 공급 돼지의 유전자형 설계와 사육, 장기 적출·품질검사, 수혜자 면역 적합성 선별, 이식 수술, 면역억제와 거부반응 감시, 신장 기능·감염의 평생 추적까지를 시스템 경계로 본다. 인간 장기 배분 정책과 투석 체계 전체의 성과는 이 기술 단독의 경계 밖에 둔다.",
+    "causalChain": [
+      {"stage": "공급 돼지 유전자형·생물보안", "mechanism": "돼지 항원과 성장 관련 유전자를 제거하고 인간 보체·응고 조절 유전자를 추가해 초기 면역 장벽을 낮추며 지정병원체 부재 상태를 유지한다.", "failureMode": "편집 조합의 불충분한 효과, 개체별 전이유전자 발현 편차 또는 잠복 병원체가 장기 품질과 수혜자 안전성의 초기 실패를 만든다."},
+      {"stage": "수혜자 선별·이식", "mechanism": "교차시험과 동반질환 평가로 고위험 수혜자를 제외하고 혈관·요관을 연결해 돼지 신장이 즉시 여과 기능을 시작하도록 한다.", "failureMode": "잔존 이종항체, 응고·보체 부조화, 수술 합병증 또는 수혜자의 중증 심혈관 질환이 이식 신장과 환자 생존을 분리해 악화시킬 수 있다."},
+      {"stage": "면역억제·거부반응 제어", "mechanism": "T세포·B세포와 공동자극 경로를 억제하고 생검, 크레아티닌, 단백뇨로 세포성·항체매개 손상을 조기에 찾아 치료한다.", "failureMode": "거부반응이 재발하거나 강한 면역억제가 기회감염을 늘리면 기능 유지와 안전성 목표가 동시에 깨진다."},
+      {"stage": "장기 기능·평생 감시", "mechanism": "사구체여과율, 이식편 생존, 삶의 질과 인수공통전염 신호를 24주 이후에도 평생 추적해 임상적 순편익을 평가한다.", "failureMode": "만성 미세혈관 손상, 돼지 장기의 성장·대사 부조화, 뒤늦은 감염 신호 또는 추적 이탈이 등록 근거와 공중보건 신뢰를 약화시킨다."}
+    ]
+  },
+  "evidenceInterpretation": [
+    {"finding": "ClinicalTrials.gov의 EXPAND NCT06878560은 2026년 3월 27일 갱신 기준 모집 중이며 10개 유전자 편집 돼지 신장의 안전성과 효능을 평가한다.", "interpretation": "기술이 개별 확장접근 이식에서 전향적 임상시험과 규제 자료 생성 단계로 이동했음을 지지한다.", "limitation": "등록 상태와 설계만 공개됐고 결과는 게시되지 않았다. 모집 중이라는 사실은 장기 기능, 감염 안전성 또는 허가 가능성을 입증하지 않는다.", "sourceUrls": ["https://clinicaltrials.gov/study/NCT06878560"]},
+    {"finding": "United Therapeutics는 2025년 11월 3일 EXPAND의 첫 10개 유전자 편집 UKidney 이식을 시행했다고 발표했다. 초기 6명은 단계적으로 등록되고 첫 두 이식 사이에는 12주 대기 기간이 있다.", "interpretation": "IND 승인만 있던 계획이 실제 시험 이식으로 전환됐고 코호트 게이트가 안전성 신호에 따라 확대 속도를 제한하는 구조임을 보여 준다.", "limitation": "기업 발표에는 독립 검증된 환자별 기능·안전성 결과가 포함되지 않았다. 수술 시행과 임상 성공은 같은 의미가 아니다.", "sourceUrls": ["https://ir.unither.com/press-releases/2025/11-03-2025-120022270", "https://ir.unither.com/press-releases/2025/02-03-2025-120011819"]},
+    {"finding": "NEJM의 2025년 사람 사례에서 69개 편집 돼지 신장은 즉시 기능했고 8일째 T세포 매개 거부반응은 강화 면역억제로 회복됐으며 환자는 52일째 심장 원인으로 사망했고 부검에서 뚜렷한 이식편 거부는 없었다.", "interpretation": "초기 기능과 치료 가능한 급성 거부반응의 가능성을 보여 주며 환자 사망 원인과 이식편 기능을 분리해 해석해야 함을 보여 준다.", "limitation": "단일 사례이며 EXPAND의 10개 편집 제품과 유전자 구성·면역억제 프로토콜이 다르다. 52일 관찰로 만성 거부, 장기 성장, 평생 감염 위험을 판단할 수 없다.", "sourceUrls": ["https://www.nejm.org/doi/abs/10.1056/NEJMoa2412747"]}
+  ],
+  "bottleneckAnalysis": [
+    {"name": "면역 적합성과 장기 기능의 동시 유지", "whyBinding": "초기 초급성 거부를 줄이는 유전자 편집만으로는 T세포·항체 반응, 보체·응고 부조화와 만성 미세혈관 손상을 제거하지 못한다. 면역억제를 강화하면 거부반응은 줄지만 감염 위험이 커져 두 목표가 결합된다.", "downstreamEffects": ["이식편 기능 저하와 재투석", "면역억제 관련 중증 감염", "코호트 확대 중단 또는 유전자형·프로토콜 재설계"], "evidenceToResolve": ["첫 6명의 24주 이식편 생존과 측정 사구체여과율", "표준화된 연속 생검의 세포성·항체매개 손상 자료", "면역억제 노출량과 감염·거부반응의 환자별 시간축 원자료"]},
+    {"name": "공급 장기 품질 일관성과 감염 감시", "whyBinding": "등록 가능한 치료가 되려면 유전자 편집 돼지 개체마다 장기 성능과 병원체 상태가 재현돼야 하며 수혜자는 평생 감염 감시를 따라야 한다. 제조 편차와 추적 이탈은 임상 신호를 해석하기 어렵게 만든다.", "downstreamEffects": ["장기 배치 간 효능 변동", "잠재적 인수공통전염 신호의 늦은 발견", "규제 자료의 비교 가능성 저하와 공급 확대 지연"], "evidenceToResolve": ["공급 돼지 계통별 편집·전이유전자 발현과 장기 방출시험 자료", "기증 돼지·수혜자 병원체 검사 원자료와 장기 추적 완결률", "추가 센터에서 재현된 수술·기능·안전성 결과"]}
+  ],
+  "relationshipAnalysis": [
+    {"technologyId": "in-vivo-gene-editing", "relationship": "유전자 편집 플랫폼 의존", "dependency": "돼지 항원 제거와 인간 조절 유전자 삽입이 이종 면역 장벽을 낮추는 장기 설계의 핵심 입력이다. 편집 정확도와 발현 안정성이 공급 장기의 품질을 결정한다.", "transferLimit": "수혜자 체내를 직접 편집하는 치료와 달리 공급 동물의 생식계열·배아 편집과 사육을 거치므로 전달체 효율보다 다중 편집의 안정성, 개체 간 발현 편차와 생물보안이 더 큰 제약이다."},
+    {"technologyId": "stem-cell-islets", "relationship": "동종 세포 대체와 공유하는 면역·제조 병목", "dependency": "두 기술 모두 부족한 인간 기증원을 대체하고 면역거부를 관리하며 생물학적 제품의 일관성을 증명해야 한다.", "transferLimit": "췌도 세포 제품의 용량·캡슐화·세포 분화 품질과 혈관화된 완전 장기의 수술·응고·장기 성장 문제는 다르므로 한쪽의 임상 성공이 다른 쪽으로 직접 전이되지 않는다."}
+  ],
+  "technologyOutlook": {
+    "basisDate": "2026-08-21",
+    "scope": "투자 관점이 아니라 EXPAND의 코호트 게이트, 환자별 기능·안전성 자료와 공급 장기 표준화가 만드는 기술적 전개 경로다. 결과가 공개되지 않은 부분은 성공으로 간주하지 않는다.",
+    "pathways": [
+      {"label": "초기 코호트 자료에 따른 제한적 다기관 확대", "horizon": "1~3년", "mechanism": "첫 6명의 12주 안전성 검토와 24주 기능·생존 결과가 사전 기준을 충족하면 FDA 협의 후 환자 수와 이식 센터를 단계적으로 늘려 등록 가능 자료를 축적한다.", "requiredConditions": ["중대한 예기치 않은 감염 신호 부재", "24주 이식편 생존과 측정 사구체여과율의 일관성", "치료 가능한 범위의 거부반응", "여러 공급 장기와 센터에서 재현되는 품질"], "observableSignals": ["ClinicalTrials.gov 등록 수와 센터 수의 공식 증가", "독립 데이터모니터링위원회 통과와 프로토콜 개정", "환자별 24주 기능·생존 자료의 동료평가 공개", "장기 방출시험과 감염 감시 자료 공개"], "invalidationSignals": ["코호트 간격의 연장 또는 모집 중지", "치료 불응 거부반응이나 이식편 소실의 반복", "인수공통전염 또는 공급 장기 품질 편차 신호"]},
+      {"label": "면역·공급 프로토콜 재설계를 동반한 임상 속도 조정", "horizon": "1~5년", "mechanism": "초기 환자에서 거부반응, 감염 또는 기능 편차가 결합되면 환자 선별, 면역억제, 돼지 유전자형 또는 사육·방출 기준을 수정하고 더 작은 단계로 재검증한다.", "requiredConditions": ["실패 원인을 환자 요인·수술·면역·장기 제조로 분해할 수 있는 원자료", "수정 프로토콜에 대한 규제기관 동의", "새 유전자형과 면역요법의 비교 가능한 전임상·임상 근거"], "observableSignals": ["등록 프로토콜의 수용 기준·면역억제·코호트 크기 변경", "추가 유전자 편집 또는 품질시험 기준의 공식 공개", "거부반응 생검과 병원체 검사에 근거한 재개 결정"], "invalidationSignals": ["원인 불명의 반복 이식편 소실", "면역억제 독성이 기능 이득을 지속적으로 상쇄", "평생 감시 이행률 부족으로 안전성 판정이 불가능"]}
+    ]
+  },
+  "researchAgenda": [
+    {"priority": "P1", "question": "EXPAND 첫 6명에서 24주 이식편 생존, 측정 사구체여과율, 단백뇨와 중대한 이상반응이 환자별로 어떻게 나타나는가?", "requiredEvidence": "ClinicalTrials.gov 결과 게시, 동료평가 논문, 환자별 시간축 기능·생검·면역억제 원자료", "decisionImpact": "코호트 확대가 실제 임상 근거에 의해 정당화되는지 판정한다."},
+    {"priority": "P1", "question": "10개 유전자 편집 UKidney의 개체·배치 간 전이유전자 발현과 방출 품질이 재현되는가?", "requiredEvidence": "공급 돼지 계통, 편집 확인, 발현 정량, 장기 방출시험과 병원체 검사 자료", "decisionImpact": "단일 이식 성공이 반복 가능한 제조 플랫폼으로 전환될 수 있는지 판정한다."},
+    {"priority": "P2", "question": "장기 기능을 유지하는 데 필요한 면역억제 강도가 감염과 기타 독성을 어느 수준으로 만드는가?", "requiredEvidence": "약물 노출량, 거부반응, 기회감염과 입원 사건의 환자별 상관 자료", "decisionImpact": "기능 이득과 안전성 손실의 결합 병목이 해소되는지 판정한다."}
+  ],
+  "citations": [
+    {"publisher": "ClinicalTrials.gov", "title": "Study to Evaluate the Safety and Efficacy of the 10 GE Xenokidney in Patients With ESRD (EXPAND), NCT06878560", "url": "https://clinicaltrials.gov/study/NCT06878560", "eventDate": "2025-11-03", "publishedDate": "2026-03-27"},
+    {"publisher": "United Therapeutics", "title": "First Transplant in EXPAND Clinical Trial of UKidney", "url": "https://ir.unither.com/press-releases/2025/11-03-2025-120022270", "eventDate": "2025-11-03", "publishedDate": "2025-11-03"},
+    {"publisher": "United Therapeutics", "title": "FDA Clearance of IND for UKidney Xenotransplantation Clinical Trial", "url": "https://ir.unither.com/press-releases/2025/02-03-2025-120011819", "eventDate": "2025-02-03", "publishedDate": "2025-02-03"},
+    {"publisher": "New England Journal of Medicine", "title": "Xenotransplantation of a Porcine Kidney for End-Stage Kidney Disease", "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa2412747", "eventDate": "2024-03-16", "publishedDate": "2025-02-07"},
+    {"publisher": "U.S. Food and Drug Administration", "title": "Xenotransplantation", "url": "https://www.fda.gov/vaccines-blood-biologics/xenotransplantation", "eventDate": "미확인", "publishedDate": "미확인"}
+  ]
+}
