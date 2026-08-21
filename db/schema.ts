@@ -52,3 +52,18 @@ export const technologyDeepAnalysisRequests = sqliteTable(
     ),
   ],
 );
+
+export const technologyInstantSourceCollections = sqliteTable(
+  "technology_instant_source_collections",
+  {
+    technologyId: text("technology_id").primaryKey(),
+    status: text("status").notNull(),
+    collectedAt: text("collected_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+    checkedSourcesJson: text("checked_sources_json").notNull(),
+    sourcesJson: text("sources_json").notNull(),
+    errorsJson: text("errors_json").notNull(),
+  },
+  (table) => [
+    index("technology_instant_source_collections_collected_idx").on(table.collectedAt),
+  ],
+);

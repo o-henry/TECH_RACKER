@@ -12,6 +12,7 @@
   let apiBaseURL = '';
   let pendingResearchCount = null;
   const deepAnalysisCache = new Map();
+  const deepAnalysisCollectionCache = new Map();
   const deepAnalysisPollTimers = new Map();
   const main = document.querySelector('#main');
   const searchLayer = document.querySelector('#searchLayer');
@@ -594,13 +595,13 @@
       <section class="detail-section deep-analysis-section">
         <details class="deep-analysis" data-deep-analysis="${escapeHTML(tech.id)}">
           <summary>
-            <span><strong>심층 기술 분석과 기술 전망</strong><small>펼칠 때 원출처 조사와 구조 분석을 시작합니다. 기술 전망은 투자 관점이 아니라 조건·관측 신호·무효화 신호로 작성됩니다.</small></span>
+            <span><strong>심층 기술 분석과 기술 전망</strong><small>펼치면 공식 원출처를 즉시 확인합니다. 기술 전망은 투자 관점이 아니라 조건·관측 신호·무효화 신호로 작성됩니다.</small></span>
             <span class="section-kicker">ON-DEMAND / NOT PREWRITTEN</span>
           </summary>
           <div class="deep-analysis-body" data-deep-analysis-body="${escapeHTML(tech.id)}" aria-live="polite">
             <div class="deep-analysis-idle">
               <span class="mono">LAZY ANALYSIS</span>
-              <p>이 영역은 미리 작성한 문구를 재사용하지 않습니다. 펼치면 소유자 전용 분석 대기열에 요청을 저장하고, 기술별 원출처를 다시 조사해 작동 구조·병목 인과관계·미래 경로를 새로 작성합니다.</p>
+              <p>이 영역은 미리 작성한 문구를 재사용하지 않습니다. 펼치면 OpenAlex·ClinicalTrials.gov·Google Trends 공식 피드를 즉시 조회하고, 확인 결과를 먼저 표시합니다.</p>
             </div>
           </div>
         </details>
@@ -621,6 +622,40 @@
     return (urls || []).map((url, index) => `
       <a href="${escapeHTML(safeURL(url))}" target="_blank" rel="noopener noreferrer">SOURCE ${String(index + 1).padStart(2, '0')} ↗</a>
     `).join('');
+  }
+
+  function instantSourceTypeLabel(type) {
+    return {
+      peer_literature: '동료평가·학술 근거 후보',
+      official_registry: '공식 등록 자료',
+      public_interest: '공적 관심 보조 신호'
+    }[type] || '원출처 후보';
+  }
+
+  function renderInstantCollection(collection) {
+    if (!collection) return '';
+    const checked = (collection.checkedSources || []).join(' · ') || '확인 출처 미확인';
+    const sources = Array.isArray(collection.sources) ? collection.sources : [];
+    const errors = Array.isArray(collection.errors) ? collection.errors : [];
+    return `
+      <section class="instant-collection" data-collection-status="${escapeHTML(collection.status || 'failed')}">
+        <header>
+          <div><span class="mono">LIVE SOURCE CHECK</span><h3>즉시 확인한 원출처</h3></div>
+          <time class="mono">${escapeHTML(collection.collectedAt || '수집 시각 미확인')}</time>
+        </header>
+        <p class="instant-collection-scope">확인 범위 — ${escapeHTML(checked)}. 이 목록은 검색 결과 원문 후보이며, 기술 상태를 확정하는 심층 해석과는 구분됩니다.</p>
+        ${sources.length ? `<div class="instant-source-list">${sources.map((source, index) => `
+          <a href="${escapeHTML(safeURL(source.url))}" target="_blank" rel="noopener noreferrer">
+            <span class="mono">${String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <small>${escapeHTML(instantSourceTypeLabel(source.sourceType))} · ${escapeHTML(source.publisher)}</small>
+              <strong>${escapeHTML(source.title)}</strong>
+              <p>${escapeHTML(source.note)}</p>
+            </div>
+            <time class="mono">사건 ${escapeHTML(source.eventDate || '미확인')}<br>게시 ${escapeHTML(source.publishedDate || '미확인')}</time>
+          </a>`).join('')}</div>` : '<p class="instant-source-empty">지금 표시할 원출처 후보를 찾지 못했습니다. 확인하지 못한 값은 추가하지 않습니다.</p>'}
+        ${errors.length ? `<small class="instant-source-errors">일부 출처 확인 실패 — ${escapeHTML(errors.join(' · '))}</small>` : ''}
+      </section>`;
   }
 
   function renderDeepAnalysisResult(item) {
@@ -730,26 +765,26 @@
       </article>`;
   }
 
-  function renderDeepAnalysisState(tech, item, detail = '') {
+  function renderDeepAnalysisState(tech, item, detail = '', collection = null) {
     const container = document.querySelector(`[data-deep-analysis-body="${tech.id}"]`);
     if (!container) return;
     if (item?.status === 'completed') {
-      container.innerHTML = renderDeepAnalysisResult(item);
+      container.innerHTML = `${renderInstantCollection(collection)}${renderDeepAnalysisResult(item)}`;
       return;
     }
     const status = item?.status || 'pending';
     container.innerHTML = `
+      ${renderInstantCollection(collection)}
       <div class="deep-analysis-progress" data-status="${escapeHTML(status)}">
-        <span class="analysis-activity" aria-hidden="true"></span>
         <div>
           <span class="mono">${escapeHTML(status.toUpperCase())}</span>
-          <strong>${escapeHTML(analysisStatusLabel(status))}</strong>
+          <strong>${escapeHTML(collection?.sources?.length ? '원출처 즉시 확인 완료 · 구조 분석 대기' : analysisStatusLabel(status))}</strong>
           <p>${escapeHTML(detail || item?.resolutionNote || (status === 'pending'
-            ? '요청이 저장되었습니다. 다음 예약 실행에서 원출처 조사와 근거 대조를 시작합니다. 이 페이지를 닫아도 요청은 유지됩니다.'
+            ? '공식 원출처 후보는 이 화면에서 즉시 확인합니다. 인과 구조·근거 한계·병목·기술 전망을 포함한 해석은 확인된 자료만으로 별도 검증합니다.'
             : status === 'researching'
               ? '요약문을 반복하지 않고, 기술 구조·근거의 의미·병목 인과관계와 조건 기반 기술 전망을 새로 작성하고 있습니다.'
               : '근거가 부족하거나 결과 형식이 검증을 통과하지 못했습니다.'))}</p>
-          <small>가짜 진행률은 표시하지 않습니다. 상태가 바뀌면 이 영역이 자동으로 갱신됩니다.</small>
+          <small>가짜 진행률은 표시하지 않습니다. Google Trends는 관심도 보조 신호로만 표시하며 기술 진전 근거로 사용하지 않습니다.</small>
         </div>
       </div>`;
   }
@@ -766,7 +801,7 @@
 
   async function deepAnalysisRequest(url, options = {}) {
     const controller = new AbortController();
-    const timer = window.setTimeout(() => controller.abort(), 15000);
+    const timer = window.setTimeout(() => controller.abort(), 20000);
     try {
       const response = await fetch(url, { cache: 'no-store', signal: controller.signal, ...options });
       const payload = await response.json().catch(() => ({}));
@@ -779,21 +814,18 @@
 
   async function loadDeepAnalysis(tech, createIfMissing = true) {
     const cached = deepAnalysisCache.get(tech.id);
-    if (cached?.status === 'completed') {
-      renderDeepAnalysisState(tech, cached);
-      return;
-    }
-    renderDeepAnalysisState(tech, cached || { status: 'pending' }, cached ? '' : '저장된 분석 결과를 확인하고 있습니다.');
+    const cachedCollection = deepAnalysisCollectionCache.get(tech.id) || null;
+    renderDeepAnalysisState(tech, cached || { status: 'researching' }, cached ? '' : '공식 원출처를 즉시 확인하고 있습니다.', cachedCollection);
     try {
       let payload = await deepAnalysisRequest(`/api/deep-analysis?technologyId=${encodeURIComponent(tech.id)}`);
-      if (!payload.item && createIfMissing) {
+      if (createIfMissing) {
         payload = await deepAnalysisRequest('/api/deep-analysis', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'X-Tracker-Deep-Analysis': '1'
           },
-          body: JSON.stringify({ technologyId: tech.id, technologyName: techName(tech) })
+          body: JSON.stringify({ technologyId: tech.id, technologyName: techName(tech), technologyNameEn: tech.nameEn })
         });
       }
       if (!payload.item) {
@@ -801,7 +833,8 @@
         return;
       }
       deepAnalysisCache.set(tech.id, payload.item);
-      renderDeepAnalysisState(tech, payload.item, payload.detail || '');
+      if (payload.collection) deepAnalysisCollectionCache.set(tech.id, payload.collection);
+      renderDeepAnalysisState(tech, payload.item, payload.detail || '', payload.collection || cachedCollection);
       if (['pending', 'researching'].includes(payload.item.status)) scheduleDeepAnalysisPoll(tech);
     } catch (error) {
       renderDeepAnalysisState(tech, { status: 'failed' }, error instanceof Error ? error.message : '심층 분석 상태를 불러오지 못했습니다.');

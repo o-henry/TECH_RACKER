@@ -11,6 +11,10 @@ import {
   validateTechnologyIdentity,
   type DeepAnalysisStatus,
 } from "../../lib/deep-analysis";
+import {
+  collectAndStoreTechnologySources,
+  findInstantSourceCollection,
+} from "../../lib/instant-source-collection";
 
 export const dynamic = "force-dynamic";
 
@@ -39,7 +43,11 @@ export async function GET(request: NextRequest) {
   if (technologyId) {
     const validated = validateTechnologyIdentity(technologyId, "조회 기술");
     if (!validated.ok) return json({ detail: validated.detail }, 400);
-    return json({ item: await findDeepAnalysisRequest(validated.technologyId) });
+    const [item, collection] = await Promise.all([
+      findDeepAnalysisRequest(validated.technologyId),
+      findInstantSourceCollection(validated.technologyId),
+    ]);
+    return json({ item, collection });
   }
   const includeItems = request.nextUrl.searchParams.get("include") === "items";
   const counts = await deepAnalysisCounts();
@@ -51,7 +59,7 @@ export async function POST(request: NextRequest) {
   const user = await getChatGPTUser();
   if (!user) return json({ detail: "Authentication required" }, 401);
   if (!sameOriginMutation(request)) return json({ detail: "Cross-site request rejected" }, 403);
-  let body: { technologyId?: unknown; technologyName?: unknown };
+  let body: { technologyId?: unknown; technologyName?: unknown; technologyNameEn?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -65,12 +73,25 @@ export async function POST(request: NextRequest) {
       technologyName: validated.technologyName,
       requestedBy: user.email,
     });
+    let collection = null;
+    let collectionDetail = "원출처를 즉시 확인하지 못했습니다. 저장된 분석 요청은 유지됩니다.";
+    try {
+      collection = await collectAndStoreTechnologySources({
+        technologyId: validated.technologyId,
+        technologyName: validated.technologyName,
+        technologyNameEn: typeof body.technologyNameEn === "string" ? body.technologyNameEn : undefined,
+      });
+      collectionDetail = collection.sources.length
+        ? `공식 원출처 후보 ${collection.sources.length}개를 즉시 수집했습니다.`
+        : "원출처를 즉시 확인했지만 현재 표시할 새 후보를 찾지 못했습니다.";
+    } catch {
+      // The durable analysis request must remain available even when a public source is temporarily unavailable.
+    }
     return json({
       created: result.created,
       item: result.item,
-      detail: result.created
-        ? "심층 분석 요청이 접수되었습니다. 원출처 조사와 근거 대조 뒤 결과가 표시됩니다."
-        : "기존 심층 분석 요청을 불러왔습니다.",
+      collection,
+      detail: collectionDetail,
     }, result.created ? 201 : 200);
   } catch (error) {
     if (error instanceof Error && error.message === "DEEP_ANALYSIS_QUEUE_FULL") {
